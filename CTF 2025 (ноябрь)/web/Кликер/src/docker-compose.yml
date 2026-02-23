@@ -1,0 +1,18 @@
+services:
+  task_nginx:
+    container_name: task.nginx
+    build:
+      context: ./
+      dockerfile: Dockerfile_nginx
+    ports:
+      - 8080:80
+    restart: always
+  
+  task_app:
+    container_name: task.app
+    build:
+      context: ./
+      dockerfile: Dockerfile_app
+    expose:
+      - 5000
+    restart: always

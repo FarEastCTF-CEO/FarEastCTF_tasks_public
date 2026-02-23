@@ -1,0 +1,8 @@
+method: GET
+headers:
+  - "User-Agent: SQLi-Scanner"
+args:
+  - "--data-urlencode"
+  - "id=1' OR '1'='1"
+  - "--max-time"
+  - "5"

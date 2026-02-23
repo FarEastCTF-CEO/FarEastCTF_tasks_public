@@ -1,0 +1,8 @@
+method: GET
+headers:
+  - "User-Agent: XSS-Scanner"
+args:
+  - "--data-urlencode"
+  - "q=<script>alert('xss')</script>"
+  - "--max-time"
+  - "5"

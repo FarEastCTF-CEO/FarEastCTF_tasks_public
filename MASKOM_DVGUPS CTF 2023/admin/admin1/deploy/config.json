@@ -1,0 +1,7 @@
+{
+    "length":40,
+    "iterations":50,
+    "timeout":10,
+    "logs":"output.log",
+    "flag":"CTFKHV{2755fd2888f7c41ad8d4c8f8755c894b}"
+}

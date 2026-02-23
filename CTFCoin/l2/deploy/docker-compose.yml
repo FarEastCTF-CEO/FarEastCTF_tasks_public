@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: bank_db
+      FLAG: CTF{ctfcoin_sqli_blacklist_bypass}
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    restart: unless-stopped
+
+  web:
+    build: ./web
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: password
+      DB_NAME: bank_db
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    restart: unless-stopped

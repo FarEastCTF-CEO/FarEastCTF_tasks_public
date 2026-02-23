@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  formatstring:
+    build: .
+    ports:
+      - "40003:40003"
+    restart: unless-stopped

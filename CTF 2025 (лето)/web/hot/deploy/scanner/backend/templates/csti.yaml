@@ -1,0 +1,8 @@
+method: GET
+headers:
+  - "User-Agent: CSTI-Scanner"
+args:
+  - "--data-urlencode"
+  - "input=<%= 7 * 7 %>"
+  - "--max-time"
+  - "5"

@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  shellcode:
+    build: .
+    ports:
+      - "19999:19999"
+    restart: unless-stopped

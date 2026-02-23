@@ -1,0 +1,2300 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>CTF Coin</title>
+    <script src="{{ url_for('static', filename='js/file/browser-selector.js') }}"></script><link rel='dns-prefetch' />
+    <style id='global-styles-inline-css' type='text/css'>
+        .wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}
+        body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--type-01: #FF2F00;--wp--preset--color--type-02: #FF6700;--wp--preset--color--type-03: #252525;--wp--preset--color--type-04: #111111;--wp--preset--color--type-05: #FFFFFF;--wp--preset--color--type-06: rgba(255,255,255,0.2);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+            .wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+            :where(.wp-block-columns.is-layout-flex){gap: 2em;}
+            .wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+    </style>
+    <link rel='stylesheet' id='style-css' href='https://klaytn.foundation/wp-content/themes/klaytn/style.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-css' href="{{ url_for('static', filename='css/file/font.css') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='layout-css' href="{{ url_for('static', filename='css/file/layout.css') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='jt-strap-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/jt-strap.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='selectric-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/vendors/select/selectric.css?ver=1.13.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='swiper-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/vendors/slider/swiper/swiper-bundle.min.css?ver=8.4.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='variables-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/var.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='reset-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/reset.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='blocks-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/blocks.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='main-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/main.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='sub-developer-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/sub-developer.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='sub-ecosystem-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/sub-ecosystem.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='sub-foundation-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/sub-foundation.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='sub-blog-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/sub-blog.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='sub-community-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/sub-community.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='sub-brand-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/sub-brand.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-strap-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-strap.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-blocks-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-blocks.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-layout-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-layout.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-main-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-main.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-developer-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-developer.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-ecosystem-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-ecosystem.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-foundation-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-foundation.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-blog-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-blog.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-community-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-community.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='rwd-brand-css' href='https://klaytn.foundation/wp-content/themes/klaytn/css/rwd-brand.css?ver=1.0.2' type='text/css' media='all' />
+    <link rel="https://api.w.org/" href="https://klaytn.foundation/wp-json/" /><link rel="icon" href="https://klaytn.foundation/wp-content/uploads/2022/12/cropped-favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://klaytn.foundation/wp-content/uploads/2022/12/cropped-favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://klaytn.foundation/wp-content/uploads/2022/12/cropped-favicon-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://klaytn.foundation/wp-content/uploads/2022/12/cropped-favicon-270x270.png" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0WWM6ESCP1');
+    </script>
+
+
+    <!-- ================== -->
+
+    
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css"/>-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/file/main.css') }}" type="text/css"/>
+    
+
+    <!-- ================== -->
+
+
+
+
+</head>
+
+<body class="home blog lang-en">
+    <div id="skip">
+        <a href="#main">Skip to main content</a>
+    </div><!-- #skip -->
+
+    <header id="header">
+        <div class="header__inner">
+            <h1 id="logo">
+                <a href="#" style="color: white;">
+                    CTFCoin
+                </a>
+            </h1><!-- #logo -->
+
+            <nav class="menu-container">
+                <ul id="menu" class="menu">
+                    <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-44'><a href="#"/>
+                        <span>Developer</span>
+                    </a>
+                    <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-42'>
+                        <a href="#"/>
+                            <span>Ecosystem</span>
+                        </a>
+                    <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-43'>
+                        <a href="#"/>
+                            <span>Governance</span>
+                        </a>
+                    <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-41'>
+                        <a href="#"/>
+                            <span>Blog</span>
+                        </a>
+                    <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-40'>
+                        <a href="#"/>
+                            <span>Community</span>
+                        </a>
+                </ul>
+            </nav><!-- .menu-container -->
+
+            <div class="language-controller">
+                <a href="#language-menu" class="language-controller__btn">
+                    <span class="sr-only">Change Language</span>
+                    <i class="jt-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.9,1.5C7.2,1.5,1.6,7,1.6,13.8c0,6.8,5.5,12.3,12.3,12.3c6.8,0,12.3-5.5,12.3-12.3C26.2,7,20.7,1.5,13.9,1.5
+                                z M23.1,12.3h-3.9c-0.1-2.9-0.8-5.2-1.4-6.9C20.5,6.6,22.6,9.2,23.1,12.3z M13.9,23.1C13.9,23.1,13.9,23.1,13.9,23.1
+                                c-1.3-2.9-2-5.5-2.2-7.8h4.4C15.9,17.6,15.3,20.2,13.9,23.1C13.9,23.1,13.9,23.1,13.9,23.1z M11.7,12.3c0.2-3.9,1.5-6.6,2.1-7.8
+                                c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.1,0c0.7,1.2,1.9,3.9,2.1,7.8H11.7z M10.1,5.4c-0.7,1.7-1.3,4.1-1.4,7H4.8C5.3,9.2,7.3,6.6,10.1,5.4z
+                                 M4.8,15.3h3.9c0.2,2.2,0.7,4.5,1.6,7.1C7.4,21.2,5.3,18.5,4.8,15.3z M17.5,22.4c1-2.5,1.5-4.9,1.6-7.1h3.9
+                                C22.6,18.5,20.4,21.2,17.5,22.4z"/>
+                        </svg>
+                    </i>
+                </a><!-- .language-controller__btn -->
+
+                <ul id="language-menu" class="language-controller__menu">
+                    <li class="jt-typo--07 language-controller--current "><a href="/"><span>ENG</span></a></li>
+                    <li class="jt-typo--07  "><a href="/kr"><span>KOR</span></a></li>
+                </ul><!-- .language-controller__menu -->
+            </div><!-- .language-controller -->
+        </div><!-- .header__inner -->
+
+        <a href="#small-menu-container" class="small-menu-controller">
+            <span class="small-menu-controller__line small-menu-controller__line--01"></span>
+            <span class="small-menu-controller__line small-menu-controller__line--02"></span>
+        </a><!-- #small-menu-controller -->
+
+        <div id="small-menu-container" class="small-menu-container">
+            <div class="small-menu-container__inner">
+                <nav class="small-menu-nav">
+                    <ul id="small-menu" class="menu">
+                        <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-44'>
+                            <a href="#"/>
+                                <span>Developer</span>
+                            </a>
+                        <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-42'>
+                            <a href="#"/>
+                                <span>Ecosystem</span>
+                            </a>
+                        <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-43'>
+                            <a href="#"/>
+                                <span>Governance</span>
+                            </a>
+                        <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-41'>
+                            <a href="#"/>
+                                <span>Blog</span>
+                            </a>
+                        <li class=' menu-item menu-item-type-post_type menu-item-object-page menu-item-40'>
+                            <a href="#"/>
+                                <span>Community</span>
+                            </a>
+                    </ul>                
+                </nav><!-- .small-menu-nav -->
+
+                <ul class="small-menu-language">
+                    <li class="jt-typo--07 small-menu-language--current"><a href="#"><span>ENG</span></a></li>
+                    <li class="jt-typo--07 "><a href="#"><span>RUS</span></a></li>
+                </ul><!-- .small-menu-language -->
+            
+            </div><!-- .small-menu-container__inner -->
+        </div><!-- .small-menu-container -->
+    </header>
+
+    <main id="main" class="main-container">
+
+        <!-- #jt-planet -->
+        <!--
+        <div id="jt-planet">
+            <span class="overlay"></span>
+            <span class="curtain"></span>
+        </div>
+        #030303
+        -->
+
+
+        <div class="main-visual">
+            <div class="wrap">
+                <div class="main-visual__slogan">
+                    <h2 lang="en" class="jt-typo-en--01">A STABLE &amp; SAFE CRYPTO COIN FOR EVERYONE</h2>
+                    <p class="jt-typo--02">CTFCoin is the choice of each player in the ctf</p>
+
+                    <div class="main-visual__actions">
+                        <a href="#" class="jt-btn__basic jt-btn--type-01" target="_blank" rel="noopener" >
+                            <span>Start Building</span>
+                            <i class="jt-icon">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                </svg>
+                            </i>
+                        </a>
+                        <a href="#/" class="jt-btn__basic jt-btn--type-02" >
+                            <span>Buy coin</span>
+                        </a>
+                    </div><!-- .main-visual__actions -->
+                </div><!-- .main-visual__slogan --> 
+
+
+                <!--
+                <div class="main-visual__notice">
+                    <div class="wrap-narrow">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="main-visual__notice-item swiper-slide">
+                                    <a class="main-visual__notice-link" href="https://klaytn.foundation/on-chain-governance-live/">
+                                        <i class="jt-typo--06 main-visual__notice-cat">Announcements</i>
+                                        <p class="jt-typo--04 main-visual__notice-title">On-chain governance via Klaytn Square is now live</p>
+                                    </a>
+                                </div>
+                                <div class="main-visual__notice-item swiper-slide">
+                                    <a class="main-visual__notice-link" href="https://klaytn.foundation/3-firsts-for-the-klaytn-gc/">
+                                        <i class="jt-typo--06 main-visual__notice-cat">Announcements, GC</i>
+                                        <p class="jt-typo--04 main-visual__notice-title">Announcing 3 firsts for the Klaytn GC</p>
+                                    </a>
+                                </div>
+                                <div class="main-visual__notice-item swiper-slide">
+                                    <a class="main-visual__notice-link" href="https://klaytn.foundation/4q22-kgf-kir-activity-report/">
+                                        <i class="jt-typo--06 main-visual__notice-cat">Announcements, News, Treasury</i>
+                                        <p class="jt-typo--04 main-visual__notice-title">4Q22 KGF/KIR Activity Report</p>
+                                    </a>
+                                </div>
+                                <div class="main-visual__notice-item swiper-slide">
+                                    <a class="main-visual__notice-link" href="https://klaytn.foundation/synpress-setup-tutorial/">
+                                        <i class="jt-typo--06 main-visual__notice-cat">Technology, Tutorials</i>
+                                        <p class="jt-typo--04 main-visual__notice-title">End-to-end testing using Synpress</p>
+                                    </a>
+                                </div>
+                                <div class="main-visual__notice-item swiper-slide">
+                                    <a class="main-visual__notice-link" href="https://klaytn.foundation/orakl-network-announcement/">
+                                        <i class="jt-typo--06 main-visual__notice-cat">Announcements</i>
+                                        <p class="jt-typo--04 main-visual__notice-title">Coming soon: Orakl Network, a Klaytn-focused decentralized oracle network</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-navigation">
+                            <div class="swiper-button swiper-button-prev">
+                                <div class="jt-icon">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.8,11.7L2.1,5.9L7.8,0.3L9.2,1.7L4.9,5.9L9.2,10.3"/>
+                                    </svg>
+                                </div>
+                                <span class="sr-only">Prev</span>
+                            </div>
+
+                            <div class="swiper-button swiper-button-next">
+                                <div class="jt-icon">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.2,11.7L2.8,10.3L7.1,5.9L2.8,1.7L4.2,0.3L9.9,5.9"/>
+                                    </svg>
+                                </div>
+                                <span class="sr-only">Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+            </div>
+
+
+            <!--
+            <div class="main-visual__datasets">
+                <ul class="main-visual__datasets-list">
+                    <li class="main-visual__datasets-item">
+                        <a href="https://www.klaytnfinder.io/txs" target="_blank" rel="noopener" data-tooltip="www.klaytnfinder.io/txs">
+                            <b class="jt-typo--01" data-key="transaction_per_sec">11</b>
+                            <span class="jt-typo--06">Transactions per second</span>
+                            <i class="jt-icon">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                </svg>
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="main-visual__datasets-item">
+                        <a href="https://www.klaytnfinder.io/" target="_blank" rel="noopener" data-tooltip="www.klaytnfinder.io">
+                            <b class="jt-typo--01" data-key="average_block_time">1.0s</b>
+                            <span class="jt-typo--06">Avg Block Time (24h)</span>
+                            <i class="jt-icon">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                </svg>
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="main-visual__datasets-item">
+                        <a href="https://www.klaytnfinder.io/" target="_blank" rel="noopener" data-tooltip="www.klaytnfinder.io">
+                            <b class="jt-typo--01" data-key="average_tx_per_block">6</b>
+                            <span class="jt-typo--06">Avg TX Per Block (24h)</span>
+                            <i class="jt-icon">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                </svg>
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="main-visual__datasets-item">
+                        <a href="https://coinmarketcap.com/currencies/klaytn/" target="_blank" rel="noopener" data-tooltip="coinmarketcap.com/currencies/klaytn/">
+                            <b class="jt-typo--01" data-key="market_cap">$466,725,256</b>
+                            <span class="jt-typo--06">Market Cap</span>
+                            <i class="jt-icon">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                </svg>
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="main-visual__datasets-item">
+                        <a href="https://square.klaytn.foundation/GC?menu=LIST" target="_blank" rel="noopener" data-tooltip="square.klaytn.foundation/GC?menu=LIST">
+                            <b class="jt-typo--01" data-key="consensus_node">31</b>
+                            <span class="jt-typo--06">Consensus Nodes</span>
+                            <i class="jt-icon">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                </svg>
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            -->
+        </div>
+
+
+        <!--==========================================================================================-->
+                        
+                        
+                        
+                  
+                        
+                <form id="send_form" action="/check_crypto" method="post" style="color:white;">  
+                    <h2>Check coins</h2><br>             
+                    <div class="row send_form_row">
+                        <div class="wrapper_radio col-sm-6 col-12">
+                            {%for i in criptoname%}
+                                <p><input id="{{i.crypto_name}}" class="send_form_radio" name="cryptoname" type="radio" value="{{i.crypto_name}}" required>
+                                <label for="{{i.crypto_name}}">{{i.crypto_name}}</label></p>
+                                    
+                            {%endfor%}
+                        </div>
+                        <div  style="margin: auto;">
+                            <button type="submit" class="send_form__btn"  style="color:black;">Submit Now</button>
+                        </div>
+                    </div>
+                    <br><br>
+                    {%if error%}
+                        <h3>{{message}}</h3>
+                    {%endif%}
+                    {%if crypto_price%}
+                        <h3>The cost of the entered cryptocurrency ({{crypto}}):</h3>
+                        <div class="col-12">
+                            {%for x in crypto_price%}
+                                <h2> {{x.crypto_price}} $ </h2>
+                            {%endfor%}
+                        </div>
+                    {%else%}
+                        {%if crypto%}
+                            <h2>Information about cryptocurrency {{crypto}} was not found in our database</h2>
+                        {%endif%}
+                    {%endif%}
+                </form>
+                                
+                        
+                        
+                            
+<!--==========================================================================================-->
+
+
+
+        <div class="main-section main-about">
+            <div class="wrap">
+                <div class="main-about__slider swiper">
+                    <div class="swiper-control">
+                        <div class="swiper-pagination"></div>
+                    </div><!-- .swiper-control -->
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <b lang="en" class="jt-typo-en--02">CTFCoin IS SUSTAINABLE.</b>
+                            <p lang="en" class="jt-typo-en--02">A SOUND TOKEN ECONOMY AND ROBUST NETWORK ARE KEY TO A SUSTAINABLE ECOSYSTEM.</p>
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <b lang="en" class="jt-typo-en--02">CTFCoin IS VERIFIABLE.</b>
+                            <p lang="en" class="jt-typo-en--02">TRUE TRUSTLESS INFRASTRUCTURE ENABLED BY VERIFIABLE TRANSPARENCY.</p>
+                        </div><!-- .swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <b lang="en" class="jt-typo-en--02">CTFCoin IS A COLLECTIVE.</b>
+                            <p lang="en" class="jt-typo-en--02">TO WORK AS AN UNIFIED ORGANISM OF BUILDERS AND USERS, FOR A UNIFIED GOAL.</p>
+                        </div><!-- .swiper-slide -->
+                    </div><!-- .swiper-wrapper -->
+                </div><!-- .main-about__slider -->
+            </div><!-- .wrap -->
+        </div><!-- .main-about -->
+
+        <div class="main-section main-developer">
+            <div class="wrap">
+                <div class="main-section__head">
+                    <h2 lang="en" class="jt-typo-en--02">DREAM IT, BUILD IT.</h2>
+                    <p class="jt-typo--02">The CTFCoin developer environment offers world-class resources and <br />support builders require to kick start their Web3 ambitions.</p>
+                </div><!-- .main-section__head -->
+
+                <div class="jt-shortcut-wrap swiper">
+                    <ul class="jt-shortcut swiper-wrapper">
+                        <li class="swiper-slide ">
+                            <div class="jt-shortcut__typo">
+                                <b>
+                                    <span class="jt-typo--01">Getting Started</span>                          
+                                </b>
+                                <p class="jt-typo--04">Everything you need to get<br/>started on CTFCoin</p>
+                            </div><!-- .jt-shortcut__typo -->
+                            <div class="jt-shortcut__reach">
+                                <div class="jt-shortcut__picture">
+                                    <figure class="jt-lazyload">
+                                        <img width="296" height="296" data-unveil="{{ url_for('static', filename='images/file/developer-shortcut-klaytn.png') }}" src="{{ url_for('static', filename='images/file/blank.gif') }}" alt="" />
+                                        <noscript><img src="https://klaytn.foundation/wp-content/themes/klaytn/images/main/developer-shortcut-klaytn.png" alt="" /></noscript>
+                                    </figure><!-- .jt-lazyload -->
+                                </div><!-- .jt-shortcut__picture -->
+
+                                <div class="jt-shortcut__link">
+                                    <a href="#" class="jt-btn__underline jt-btn--type-01" target="_blank" rel="noopener" >
+                                        <span>Learn More</span>
+                                        <i class="jt-icon">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                            </svg>
+                                        </i>
+                                    </a>
+                                </div><!-- .jt-shortcut__link -->
+                            </div><!-- .jt-shortcut__reach -->
+                        </li>
+
+                        <li class="swiper-slide ">
+                            <div class="jt-shortcut__typo">
+                                <b><span class="jt-typo--01">Resources</span></b>
+                                <p class="jt-typo--04">Klaytn is a highly optimized, <br />BFT-based public blockchain that aims to meet the enterprise-grade reliability</p>
+                            </div><!-- .jt-shortcut__typo -->
+
+                            <div class="jt-shortcut__reach">
+                                <div class="jt-shortcut__picture">
+                                    <figure class="jt-lazyload">
+                                        <img width="296" height="296" data-unveil="https://klaytn.foundation/wp-content/themes/klaytn/images/main/developer-shortcut-diamond.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                                        <noscript>
+                                            <img src="https://klaytn.foundation/wp-content/themes/klaytn/images/main/developer-shortcut-diamond.png" alt="" />
+                                        </noscript>
+                                    </figure><!-- .jt-lazyload -->
+                                </div><!-- .jt-shortcut__picture -->
+
+                                <div class="jt-shortcut__link">
+                                    <a href="#" class="jt-btn__underline jt-btn--type-01" target="_blank" rel="noopener">
+                                        <span>Learn More</span>
+                                        <i class="jt-icon">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                            </svg>
+                                        </i>
+                                    </a>
+                                </div><!-- .jt-shortcut__link -->
+                            </div><!-- .jt-shortcut__reach -->
+                        </li>
+                
+                        <li class="swiper-slide ">
+                            <div class="jt-shortcut__typo">
+                                <b><span class="jt-typo--01">Developer Tools</span></b>
+                                <p class="jt-typo--04">Technical Tutorials to facilitate <br/>your CTFCoin experience</p>
+                            </div><!-- .jt-shortcut__typo -->
+
+                            <div class="jt-shortcut__reach">
+                                <div class="jt-shortcut__picture">
+                                    <figure class="jt-lazyload">
+                                        <img width="296" height="296" data-unveil="https://klaytn.foundation/wp-content/themes/klaytn/images/main/developer-shortcut-blocks.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                                        <noscript>
+                                            <img src="https://klaytn.foundation/wp-content/themes/klaytn/images/main/developer-shortcut-blocks.png" alt="" />
+                                        </noscript>
+                                    </figure><!-- .jt-lazyload -->
+                                </div><!-- .jt-shortcut__picture -->
+
+                                <div class="jt-shortcut__link">
+                                    <a href="#" class="jt-btn__underline jt-btn--type-01" target="_blank" rel="noopener">
+                                        <span>Learn More</span>
+                                        <i class="jt-icon">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                            </svg>
+                                        </i>
+                                    </a>
+                                </div><!-- .jt-shortcut__link -->
+                            </div><!-- .jt-shortcut__reach -->
+                        </li>
+                    </ul><!-- .jt-shortcut -->
+                </div><!-- .jt-shortcut-wrap -->
+            </div><!-- .wrap -->
+        </div><!-- .main-developer -->
+
+
+        <div class="main-section main-blog">
+            <div class="wrap">
+                <div class="main-section__head">
+                    <h2 lang="en" class="jt-typo-en--02">THIS IS CTFCoin</h2>
+                    <p class="jt-typo--02">The latest official news, events and insights direct from the CTFCoin ecosystem.</p>
+                </div><!-- .main-section__head -->
+
+                <div class="jt-fixity-list">
+                    <div class="jt-fixity-list__visual">
+                        <div class="jt-fixity-list__item">
+                            <div class="jt-fixity-list__item-inner">
+                                <a href="#" class="jt-fixity-list__thumb">
+                                    <figure class="jt-lazyload">
+                                        <span class="jt-lazyload__color-preview"></span>
+                                        <img width="720" height="378" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/06/230608_Sam-Letter-3-1-720x378.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/06/230608_Sam-Letter-3-1-720x378.png" alt="" /></noscript>
+                                    </figure><!-- .jt-lazyload -->
+                                </a><!-- .jt-fixity-list__thumb -->
+                                <div class="jt-cats-list">
+                                    <a href="#" class="jt-typo--08">
+                                        Insights
+                                    </a>
+                                    <a href="#" class="jt-typo--08">
+                                        Thoughts
+                                    </a>    
+                                </div><!-- .jt-cats-list -->
+                                
+                                <a href="#" class="jt-fixity-list__content">
+                                    <h3 class="jt-typo--01 jt-fixity-list__title">
+                                        Real-World Asset (RWA) Tokenization for Blockchain Mass Adoption
+                                    </h3>
+                                    <p class="jt-typo--04 jt-fixity-list__desc">
+                                        The following is a part of a regular Foundation communique in which Sam shares his thoughts with other Foundation members. The content of the original communique has been repurposed for sharing with the community. We as an organization chose to do this to provide the broader CTFCoin community with insights and visibility into how the [&hellip;]
+                                    </p>
+                                </a><!-- .jt-fixity-list__content -->
+
+                                <div class="jt-list-meta">
+                                    <time class="jt-typo--08 jt-list-meta__date" datetime="2023-06-09">
+                                        Jun 09, 2023
+                                    </time>
+                                    <div class="jt-list-meta__tag">
+                                        <a class="jt-typo--08" href="/tag/blockchain">
+                                            <span>#Blockchain</span>
+                                        </a>
+                                        <a class="jt-typo--08" href="/tag/real-world-assets">
+                                            <span>#Real World Assets</span>
+                                        </a>
+                                        <a class="jt-typo--08" href="/tag/rwa">
+                                            <span>#RWA</span>
+                                        </a>
+                                    </div><!-- .jt-list-meta__tag -->
+                                </div><!-- .jt-list-meta -->
+                            </div><!-- .jt-fixity-list__item-inner -->
+                        </div><!-- .jt-fixity-list__item -->
+                        
+                        <div class="jt-fixity-list__item">
+                            <div class="jt-fixity-list__item-inner">
+                                <a href="#" class="jt-fixity-list__thumb">
+                                    <figure class="jt-lazyload">
+                                        <span class="jt-lazyload__color-preview"></span>
+                                        <img width="720" height="378" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/06/230601-720x378.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/06/230601-720x378.png" alt="" /></noscript>
+                                    </figure><!-- .jt-lazyload -->
+                                </a><!-- .jt-fixity-list__thumb -->
+
+                                <div class="jt-cats-list">
+                                    <a href="#" class="jt-typo--08">Ecosystem</a>
+                                    <a href="#" class="jt-typo--08">Announcements</a>
+                                    <a href="#" class="jt-typo--08">Insights</a>
+                                </div><!-- .jt-cats-list -->
+                                
+                                <a href="#" class="jt-fixity-list__content">
+                                    <h3 class="jt-typo--01 jt-fixity-list__title">
+                                        Driving Real Changes: The Road to Mass Adoption
+                                    </h3>
+                                    <p class="jt-typo--04 jt-fixity-list__desc">
+                                        In our 2023 roadmap, CTFCoin declared our intention to transform CTFCoin into the public foundational layer of tomorrow&#8217;s on-chain world by helping to realize core societal infrastructure on-chain. In the document linked below, we will be sharing the steps that we will be taking to achieve this mission, to give our community a clear [&hellip;]</p>
+                                </a><!-- .jt-fixity-list__content -->
+
+                                <div class="jt-list-meta">
+                                    <time class="jt-typo--08 jt-list-meta__date" datetime="2023-06-09">
+                                        Jun 09, 2023
+                                    </time>
+                                    <div class="jt-list-meta__tag">
+                                        <a class="jt-typo--08" href="/tag/blockchain">
+                                            <span>#Blockchain</span>
+                                        </a>
+                                        <a class="jt-typo--08" href="/tag/rwa">
+                                            <span>#RWA</span>
+                                        </a>
+                                    </div><!-- .jt-list-meta__tag -->
+                                </div><!-- .jt-list-meta -->
+                            </div><!-- .jt-fixity-list__item-inner -->
+                        </div><!-- .jt-fixity-list__item -->
+                    </div><!-- .jt-fixity-list__visual -->
+
+                    <div class="jt-fixity-list__basic">
+                        <div class="jt-fixity-list__item">
+                            <div class="jt-fixity-list__item-inner">
+                                <div class="jt-cats-list">
+                                    <a class="jt-typo--08" href="#">Technology</a>
+                                    <a class="jt-typo--08" href="#">Tutorials</a>
+                                    <a class="jt-typo--08" href="#">Industry</a>
+                                    <a class="jt-typo--08" href="#">for Developer</a>
+                                </div><!-- .jt-cats-list -->
+                                
+                                <a href="#" class="jt-fixity-list__content">
+                                    <h3 class="jt-typo--02 jt-fixity-list__title">Zero-Knowledge Proofs (ZKPs)</h3>
+                                </a><!-- .jt-fixity-list__content -->
+
+                                <div class="jt-list-meta">
+                                    <time class="jt-typo--08 jt-list-meta__date" datetime="2023-06-01">Jun 01, 2023</time>
+                                    <div class="jt-list-meta__tag">
+                                        <a class="jt-typo--08" href="#"><span>#Blockchain</span></a>
+                                        <a class="jt-typo--08" href="#"><span>#CTFCoin</span></a>
+                                        <a class="jt-typo--08" href="#"><span>#Technology</span></a>
+                                        <a class="jt-typo--08" href="#"><span>#Tutorials</span></a>
+                                        <a class="jt-typo--08" href="#s"><span>#ZKPs</span></a>
+                                    </div><!-- .jt-list-meta__tag -->
+                                </div><!-- .jt-list-meta -->
+                            </div><!-- .jt-fixity-list__item-inner -->
+                        </div><!-- .jt-fixity-list__item -->
+                        <div class="jt-fixity-list__item">
+                            <div class="jt-fixity-list__item-inner">
+                                <div class="jt-cats-list">
+                                    <a class="jt-typo--08" href="#">Ecosystem</a>
+                                    <a class="jt-typo--08" href="#">Insights</a>
+                                </div><!-- .jt-cats-list -->
+                                
+                                <a href="#" class="jt-fixity-list__content">
+                                    <h3 class="jt-typo--02 jt-fixity-list__title">CTFCoin in Numbers: April 2023</h3>
+                                </a><!-- .jt-fixity-list__content -->
+
+                                <div class="jt-list-meta">
+                                    <time class="jt-typo--08 jt-list-meta__date" datetime="2023-05-31">May 31, 2023</time>
+                                    <div class="jt-list-meta__tag">
+                                        <a class="jt-typo--08" href="#"><span>#Blockchain</span></a>
+                                        <a class="jt-typo--08" href="#"><span>#CTFCoin</span></a>
+                                        <a class="jt-typo--08" href="#"><span>#On-chain Data</span></a>
+                                    </div><!-- .jt-list-meta__tag -->
+                                </div><!-- .jt-list-meta -->
+                            </div><!-- .jt-fixity-list__item-inner -->
+                        </div><!-- .jt-fixity-list__item -->
+                        
+                        <div class="jt-fixity-list__item">
+                            <div class="jt-fixity-list__item-inner">
+                                <div class="jt-cats-list">
+                                    <a class="jt-typo--08" href="#">Technology</a>
+                                    <a class="jt-typo--08" href="#">Tutorials</a>
+                                    <a class="jt-typo--08" href="#">Announcements</a>
+                                    <a class="jt-typo--08" href="#">Insights</a>
+                                    <a class="jt-typo--08" href="#">Industry</a>
+                                    <a class="jt-typo--08" href="#">for User</a>
+                                </div><!-- .jt-cats-list -->
+                                
+                                <a href="#" class="jt-fixity-list__content">
+                                    <h3 class="jt-typo--02 jt-fixity-list__title">Decentralized Social Networks 101</h3>
+                                </a><!-- .jt-fixity-list__content -->
+
+                                <div class="jt-list-meta">
+                                    <time class="jt-typo--08 jt-list-meta__date" datetime="2023-05-17">May 17, 2023</time>
+                                    <div class="jt-list-meta__tag">
+                                        <a class="jt-typo--08" href="#"><span>#Blockchain</span></a>
+                                        <a class="jt-typo--08" href="#"><span>#Cryptocurrency</span></a>
+                                    </div><!-- .jt-list-meta__tag -->
+                                </div><!-- .jt-list-meta -->
+                            </div><!-- .jt-fixity-list__item-inner -->
+                        </div><!-- .jt-fixity-list__item -->
+                    </div><!-- .jt-fixity-list__basic -->
+                </div><!-- .jt-fixity-list -->
+
+                <div class="main-section__more">
+                    <a href="#" class="jt-btn__basic jt-btn--type-02"><span>Learn More</span></a>
+                </div><!-- .main-section__more -->
+            </div><!-- .wrap -->
+        </div><!-- .main-blog -->
+
+        <div class="main-section main-ecosystem">
+            <div class="wrap">
+                <div class="main-section__head">
+                    <h2 lang="en" class="jt-typo-en--02">POWERED BY CTFCoin</h2>
+                    <p class="jt-typo--02">From DeFi to gaming, the CTFCoin ecosystem boasts a diverse range of services both small and large, <br />all working together to achieve true mass adoption.</p>
+                </div><!-- .main-section__head -->
+
+                <div class="main-ecosystem__banner">
+                    <div class="main-ecosystem__banner-bg">
+                        <div class="jt-background-video jt-autoplay-inview">
+                            <div class="jt-background-video__vod" data-video="https://klaytn.foundation/wp-content/themes/klaytn/video/main-ecosystem-banner.mp4"></div>
+                            <div class="jt-background-video__poster" data-unveil="https://klaytn.foundation/wp-content/themes/klaytn/images/main/ecosystem-banner-poster.jpg"></div>
+                        </div><!-- .ke-background-video -->
+                    </div><!-- .main-ecosystem__banner-bg -->
+
+                    <div class="main-ecosystem__banner-content">
+                        <b class="jt-typo--03 main-ecosystem__banner-typo">Submit your CTFCoin service to be considered for listing <br />on our official ecosystem discovery directory.</b>
+
+                        <div class="main-ecosystem__banner-link">
+                            <a href="https://forms.gle/qyxpMmJEAfpeuB7d7" class="jt-btn__basic jt-btn--type-01" target="_blank" rel="noopener">
+                                <span>Submit Project</span>
+                                <i class="jt-icon">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+                                    </svg>
+                                </i>
+                            </a>
+                        </div><!-- .main-ecosystem__banner-link -->
+                    </div><!-- .main-ecosystem__banner-content -->
+                </div><!-- .main-ecosystem__banner -->
+
+                <div class="main-ecosystem__info">
+                    <div class="jt-tabs">
+                        <nav class="jt-tabs__nav">
+                            <ul class="jt-tabs__menu">
+
+
+
+
+                                                                                                            <li class="jt-tabs--active" ><a class="jt-typo--03" href="#wallets"><span>Wallets</span></a></li>
+                                                                                                                                                <li  ><a class="jt-typo--03" href="#gaming"><span>Gaming</span></a></li>
+                                                                                                                                                <li  ><a class="jt-typo--03" href="#dex__defi"><span>DEX / DeFi</span></a></li>
+                                                                                                                                                <li  ><a class="jt-typo--03" href="#tools__infrastructure"><span>Tools / Infrastructure</span></a></li>
+                                                                                                                                                <li  ><a class="jt-typo--03" href="#cexes__payments"><span>CEXes / Payments</span></a></li>
+                                                                                                        </ul><!-- .jt-tabs__menu -->
+                </nav><!-- .jt-tabs__nav -->
+
+                <div class="jt-tabs__panels">
+                                                                        <div id="wallets">
+                                <div class="jt-card-list">
+                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_kaikas.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_kaikas.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Kaikas</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Kaikas is a global digital wallet functioning as a web browser extension. With Kaikas, you can safely and seamlessly manage the CTFCoin tokens that you control. CTFCoin is an enterprise-grade, service-centric blockchain platform developed by South Korean internet giant Kakao. As an HD wallet, Kaikas allows you to create more than one account with a [&hellip;]</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_klip.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_klip.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Klip</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Klip supports CTFCoin, which acts as the key to various digital assets, as well as services coins issued by blockchain services.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/05/SafePal-140x140.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/05/SafePal-140x140.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">SafePal</h3>
+                <p class="jt-typo--06 jt-card-list__desc">SafePal is a comprehensive crypto wallet suite founded in 2018 with over 10 million users globally. As a non-custodial wallet suite with hardware wallet, mobile app, and browser extension solutions, SafePal empowers users to own their crypto adventure by helping them to access opportunities safely in the decentralized world.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_metamask.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_metamask.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">MetaMask</h3>
+                <p class="jt-typo--06 jt-card-list__desc">MetaMask is the leading self-custodial wallet. The safe and simple way to access blockchain applications and web3. Trusted by millions of users worldwide.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_welldonewallet.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_welldonewallet.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">WELLDONE Wallet</h3>
+                <p class="jt-typo--06 jt-card-list__desc">WELLDONE Wallet is a multi-chain wallet that gives you control over all your assets from a single platform. Navigate safely across different networks, free from constraints. Integrated and state-of-the-art, our wallet is built to take you places.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_dcent.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_dcent.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">D&#8217;Cent</h3>
+                <p class="jt-typo--06 jt-card-list__desc">With D&#8217;CENT Wallet, you can manage various cryptocurrencies such as Bitcoin, Ethereum, XRP, CTFCoin, and more.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_coin98.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_coin98.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Coin98</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Coin98 is building the infrastructure for Web3 with a suite of DeFi products | Coin98 Wallet, Coin98 Exchange and SpaceGate.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_huobiwallet.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_wallets_huobiwallet.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Huobi Wallet</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Huobi Wallet is a professional wallet which officially launched on September 14, 2018, and supports the storage, transfer and exchange of the mainstream coin like BTC, ETH, USDT, LTC, etc. as well as all the ERC-20 coin.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        WALLETS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                </div><!-- .jt-card-list -->
+                            </div>
+                                                                                                <div id="gaming">
+                                <div class="jt-card-list">
+                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_defikingdom.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_defikingdom.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">DeFi Kingdoms</h3>
+                <p class="jt-typo--06 jt-card-list__desc">DeFi Kingdoms, migrated from Harmony to CTFCoin, is a cross-chain, play-to-earn game built on a strong DeFi protocol with plans to become a fully-fledged MMORPG in later phases of the Roadmap.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_avatara.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_avatara.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Avatara</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Jointly developed by game studio NX3 of ROHAN M fame and blockchain developer NXIO, Avatara is an upcoming blockbuster MMORPG that integrates P2E and NFT mechanisms</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_p2eall.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_p2eall.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">P2EALL</h3>
+                <p class="jt-typo--06 jt-card-list__desc">p2eAll is a blockchain game platform with global users from Indonesia, India, Bangladesh, Vietnam, the Philippines, and the United States. It provide various services for P2E users, including blockchain game ranking services, airdrop services, calendars, and news.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_klaydice.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_klaydice.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">CTFCoin</h3>
+                <p class="jt-typo--06 jt-card-list__desc">CTFCoin is a P2E (Play to Earn) version of ‘DICAST: Rules of Chaos’ on CTFCoin Network.&#8216;DICAST GOLD&#8217; is a P2E (Play to Earn) version of ‘DICAST: Rules of Chaos’ and has been released through Google and the IOS market.The number of downloads has reached 1 million and the number of users by 800,000.CTFCoin is an [&hellip;]</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/04/335019430_944406193376105_7203257254016750195_n-140x140.jpg" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/04/335019430_944406193376105_7203257254016750195_n-140x140.jpg" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Meta World: My City</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Meta World: My City is a multi-layered real estate Metaverse game with a real city-based implementation. Meta World: My City is implemented on a real-city basis, you can enjoy strategic gameplay with other players, collect assets, build, and trade real estate in the city of your choice! Enjoy real estate transactions &amp; board games in [&hellip;]</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_MarbleX.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_MarbleX.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">MarbleX</h3>
+                <p class="jt-typo--06 jt-card-list__desc">MARBLEX is a blockchain subsidiary of Netmarble Corp., powered by game-based blockchain service. MARBLEX aims to bring the highest quality blockchain games to market with AAA titles. By providing services such as a cryptocurrency wallet, decentralized exchange, token staking, and NFT Marketplace, MARBLEX allows users to experience an optimal blockchain-based game ecosystem.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_superwalk.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_superwalk.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">SuperWalk</h3>
+                <p class="jt-typo--06 jt-card-list__desc">SuperWalk is a blockchain reward-based Move-To-Earn service that provides tokens just by walking.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_archeworld-1.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_gaming_archeworld-1.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">ArcheWorld</h3>
+                <p class="jt-typo--06 jt-card-list__desc">ArcheWorld is a MMORPG that incorporates blockchain technologies and is based on globally-acclaimed “ArcheAge.” ArcheAge is a seamless, open-world, sandbox MMORPG that was first launched in Korea in 2013 and now serviced in North America, Europe, Japan, Russia, Korea, China, Taiwan and Southeast Asia.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        GAMING                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                </div><!-- .jt-card-list -->
+                            </div>
+                                                                                                <div id="dex__defi">
+                                <div class="jt-card-list">
+                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_dexes-defi_klayswap.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_dexes-defi_klayswap.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">CTFCoin swap</h3>
+                <p class="jt-typo--06 jt-card-list__desc">CTFCoin swap is AMM-based Instant Swap Protocol. The AMM (Automated Market Maker) protocol we are launching is a decisive DEX protocol that has now brought the Decentralized Finance (DeFi) market to the general public. Simply put, AMM is a protocol that supports immediate swapping between tokens by replacing the existing buy/sell orderbook structure with a Liquidity [&hellip;]</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_dexes-defi_swapscanner.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_dexes-defi_swapscanner.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Swapscanner</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Swapscanner aims to be a one-stop platform for the CTFCoin ecosystem. Starting as a next-generation DEX aggregator, we are providing services such as Pro chart and Wallet sequentially.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_klaystation.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_klaystation.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">CTFCoin station</h3>
+                <p class="jt-typo--06 jt-card-list__desc">CTFCoin stations are the staking tools of the CTFCoin network. Anyone who owns the CTFCoin can use the tool to freely staking the CTFCoin GC.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_neopin.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_neopin.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">NEOPIN</h3>
+                <p class="jt-typo--06 jt-card-list__desc">NEOPIN started the blockchain operations in 2017. Currently, Team NEOPIN is contribution dozens of public blockchain networks and operating various consensus-based blockchain nodes based on DPoS, PoA, and LPoS mechanisms. Based on its experiences, NEOPIN is working on node operations to improve the stability and speed of the blockchain networks while communicating with communities through [&hellip;]</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_klevafinance.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_klevafinance.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Kleva Finance</h3>
+                <p class="jt-typo--06 jt-card-list__desc">KLEVA Protocol aims to become the largest lending protocol for leveraged yield farmers and lenders within the CTFCoin DeFi Ecosystem. Currently, when compared to layer-1 blockchain players like Ethereum, Binance Smart Chain, Terra, and Solana, CTFCoin&#8217;s DeFi Ecosystem is rather small and needs work to progress.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_bluewhaleprotocol.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_bluewhaleprotocol.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Bluewhale Protocol</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Bluewale offers a variety of services that make investment activities easier and more efficient for cryptocurrency owners.Currently, Bluewale provides DeFi-related services such as assets held and DeFi investment status dashboards and smart swaps at CTFCoin Blockchain.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_kokoafinance.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_project_kokoafinance.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">KoKoa Finance</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Kokoa Finance is a crypto-asset-backed stablecoin platform where users can borrow KSD stablecoin against crypto assets without paying any nominal cost.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_dexes-defi_klaybank.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_dexes-defi_klaybank.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">CTFCoin bank</h3>
+                <p class="jt-typo--06 jt-card-list__desc">CTFCoin bank is the first Flashloan Lending protocol in CTFCoin. As both Lending and Flashloan are essential services within the Web 3.0 ecosystem, offers integrated digital asset services from Deposit &amp; Borrowing to Bond, Staking and Flashloan.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        DEXES/DEFI                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                </div><!-- .jt-card-list -->
+                            </div>
+                                                                                                <div id="tools__infrastructure">
+                                <div class="jt-card-list">
+                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/04/img_symbolOrakl_lightbg_40.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/04/img_symbolOrakl_lightbg_40.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Orakl Network</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Orakl Network is a complete EVM-compatible oracle. As a CTFCoin native Oracle, Orakl Network provides Data Feed, VRF and Request-Response solutions.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_klaytnscope.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_klaytnscope.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">CTFCoin</h3>
+                <p class="jt-typo--06 jt-card-list__desc">CTFCoin allows you to find data by monitoring network health and statistics of CTFCoin as well as profiling blocks and transactions on CTFCoin.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_klaytnfinder.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_klaytnfinder.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">CTFCoin</h3>
+                <p class="jt-typo--06 jt-card-list__desc">CTFCoin is a block explorer for CTFCoin network. It helps find various information in CTFCoin network (e.g block, contract, token, nft etc…)</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_snapshot.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_snapshot.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Snapshot</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Snapshot is a voting platform that allows DAOs, DeFi protocols, or NFT communities to vote easily and without gas fees. The tool allows high customization of the voting process to cater to the diverse needs of the users and organizations. Customization includes different aspects like calculation of the users&#8217; voting power, selection of the voting [&hellip;]</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_kas.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_kas.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">KAS</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Building Your Own. BlockChain Service with. CTFCoin API Service. Start the first step toward the success of blockchain services with KAS.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_dappradar.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_tools-infrastructure_dappradar.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">DappRadar</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Explore NFTs, NFT Marketplaces, Blockchain Games, De-Fi, Dapps On The Blockchain And More On The World&#8217;s Dapp Store.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_dapps_kns-2.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_dapps_kns-2.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">KNS</h3>
+                <p class="jt-typo--06 jt-card-list__desc">CTFCoin Name Service (CNS) is a name service that operates in a decentralized manner on the CTFCoin blockchain, inspired by the Ethereum Name Service.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_oracles-bridges_wormhole.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_oracles-bridges_wormhole.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Wormhole</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Wormhole allows developers to easily build decentralized applications that span the entire blockchain ecosystem.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        TOOLS/INFRASTRUCTURE                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                </div><!-- .jt-card-list -->
+                            </div>
+                                                                                                <div id="cexes__payments">
+                                <div class="jt-card-list">
+                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_cexespayments_binance.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/01/ecosystem_cexespayments_binance.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Binance</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Binance is the world&#8217;s leading blockchain and cryptocurrency infrastructure provider with a financial product suite that includes the largest digital asset exchange by volume. Trusted by millions worldwide, the Binance platform is dedicated to increasing the freedom of money for users, and features an unmatched portfolio of crypto products and offerings, including: trading and finance, [&hellip;]</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="https://klaytn.foundation/project/kucoin/" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_kucoin-1.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_kucoin-1.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Kucoin</h3>
+                <p class="jt-typo--06 jt-card-list__desc">KuCoin is a secure cryptocurrency exchange that allows you to buy, sell, and trade Bitcoin, Ethereum, and 700+ altcoins.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_bithumb-1.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_bithumb-1.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Bithumb</h3>
+                <p class="jt-typo--06 jt-card-list__desc">No.1 digital asset platform Bithumb</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_okx-1.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_okx-1.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">OKX</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Buy BTC, ETH, and more on OKX, a leading crypto exchange – explore Web3, invest in DeFi and NFTs. Register now and experience the future of finance.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_bybit-1.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_bybit-1.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Bybit</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Bybit Multilingual Support. Highly Secure, Stable.Trade With 101x Leverage. </p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_huobi.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_huobi.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Huobi</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Trade cryptocurrency on your phone. Buy, sell and swap cryptos 24/7 with low trading fees. World-leading cryptocurrency trading exchange, offers more than 1,000 types of cryptos.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_gateio.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_gateio.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Gate.io</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Leading cryptocurrency exchange with over 1400+ cryptocurrencies &amp; stablecoins such as Bitcoin ✓ Ethereum ✓ Dogecoin ✓ </p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                                                                    <div class="jt-card-list__item">
+            <a href="#" class="jt-card-list__link">
+
+                                                                        
+                <div class="jt-card-list__logo">
+                    <figure class="jt-lazyload">
+                        <img width="140" height="140" data-unveil="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_coinone.png" src="https://klaytn.foundation/wp-content/themes/klaytn/images/layout/blank.gif" alt="" />
+                        <noscript><img src="https://klaytn.foundation/wp-content/uploads/2023/02/ecosystem_cexespayments_coinone.png" alt="" /></noscript>
+                    </figure><!-- .jt-lazyload -->
+                </div><!-- .jt-card-list__logo -->
+
+                <h3 class="jt-typo--02 jt-card-list__title">Coinone</h3>
+                <p class="jt-typo--06 jt-card-list__desc">Coinone Core is a cutting edge solution to build a crypto exchange.</p>
+                                    <span class="jt-typo--07 jt-card-list__cat">
+                        CEXES/PAYMENTS                    </span>
+                            </a><!-- .jt-card-list__link -->
+        </div><!-- .jt-card-list__item -->
+
+                                                                                </div><!-- .jt-card-list -->
+                            </div>
+                                                            </div><!-- .jt-tabs__panels -->
+            </div><!-- .jt-tabs -->
+
+            <div class="main-section__more">
+                <a href="#" class="jt-btn__basic jt-btn--type-02"><span>Learn More</span></a>
+            </div><!-- .main-section__more -->
+        </div><!-- .main-ecosystem__info -->
+    </div><!-- .wrap -->
+</div><!-- .main-ecosystem -->
+
+<div class="main-section main-community">
+    <div class="wrap">
+        <div class="main-section__head">
+            <h2 lang="en" class="jt-typo-en--02">PLAY A PART</h2>
+            <p class="jt-typo--02">Be a part of the CTFCoin Collective, a community of aspirers that look to inspire.</p>
+        </div><!-- .main-section__head -->
+                <ul class="main-community__channel">
+                            <li>
+                    <h3 class="jt-typo--01 main-community__channel-type">For Developers</h3>
+
+                    <ul class="main-community__channel-list">
+                                                                                    <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.6551 5.79527C17.8251 3.66527 15.1251 3.72527 15.1251 3.72527L14.8451 4.04527C18.1951 5.06527 19.7451 6.54527 19.7451 6.54527C17.6951 5.42527 15.6851 4.87527 13.8151 4.65527C12.3951 4.49527 11.0351 4.53527 9.83512 4.69527C9.71512 4.69527 9.61512 4.71527 9.50512 4.73527C8.81512 4.79527 7.14512 5.05527 5.03512 5.97527C4.30512 6.30527 3.87512 6.54527 3.87512 6.54527C3.87512 6.54527 5.50512 4.98527 9.05512 3.96527L8.86512 3.72527C8.86512 3.72527 6.16512 3.66527 3.33512 5.79527C3.33512 5.79527 0.495117 10.9353 0.495117 17.2753C0.495117 17.2753 2.14512 20.1353 6.50512 20.2653C6.50512 20.2653 7.23512 19.3753 7.82512 18.6353C5.32512 17.8853 4.37512 16.3153 4.37512 16.3153C4.37512 16.3153 4.57512 16.4553 4.92512 16.6453C4.94512 16.6653 4.96512 16.6853 5.00512 16.7053C5.06512 16.7453 5.12512 16.7653 5.18512 16.8053C5.67512 17.0853 6.16512 17.2953 6.62512 17.4753C7.43512 17.7953 8.39512 18.1053 9.51512 18.3253C10.9951 18.6053 12.7251 18.6953 14.6151 18.3453C15.5451 18.1853 16.4851 17.9153 17.4751 17.4953C18.1651 17.2353 18.9351 16.8653 19.7351 16.3353C19.7351 16.3353 18.7551 17.9453 16.1751 18.6753C16.7651 19.4253 17.4751 20.2753 17.4751 20.2753C21.8251 20.1353 23.5051 17.2853 23.5051 17.2853C23.5051 10.9453 20.6651 5.80527 20.6651 5.80527L20.6551 5.79527ZM8.31512 15.4453C7.21512 15.4453 6.30512 14.4653 6.30512 13.2553C6.30512 12.0453 7.19512 11.0653 8.31512 11.0653C9.43512 11.0653 10.3451 12.0453 10.3251 13.2553C10.3251 14.4553 9.43512 15.4453 8.31512 15.4453ZM15.5051 15.4453C14.4051 15.4453 13.4951 14.4653 13.4951 13.2553C13.4951 12.0453 14.3851 11.0653 15.5051 11.0653C16.6251 11.0653 17.5151 12.0453 17.5151 13.2553C17.5151 14.4653 16.6251 15.4453 15.5051 15.4453Z" fill="white"/>
+</svg>
+</i>
+                                            Discord                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Official                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.76074C6.2 1.76074 1.5 6.46074 1.5 12.2607C1.5 16.9007 4.51 20.8307 8.68 22.2207C9.21 22.3207 9.4 21.9907 9.4 21.7107C9.4 21.4607 9.4 20.8007 9.39 19.9207C6.47 20.5507 5.85 18.5107 5.85 18.5107C5.37 17.3007 4.68 16.9707 4.68 16.9707C3.73 16.3207 4.75 16.3307 4.75 16.3307C5.8 16.4007 6.36 17.4107 6.36 17.4107C7.3 19.0107 8.82 18.5507 9.42 18.2807C9.52 17.6007 9.79 17.1407 10.09 16.8807C7.76 16.6207 5.31 15.7107 5.31 11.6907C5.31 10.5407 5.72 9.61074 6.39 8.87074C6.28 8.60074 5.92 7.54074 6.49 6.09074C6.49 6.09074 7.37 5.81074 9.38 7.17074C10.22 6.94074 11.12 6.82074 12.01 6.82074C12.9 6.82074 13.8 6.94074 14.64 7.17074C16.64 5.81074 17.52 6.09074 17.52 6.09074C18.09 7.54074 17.73 8.60074 17.62 8.87074C18.29 9.60074 18.7 10.5407 18.7 11.6907C18.7 15.7207 16.25 16.6107 13.91 16.8707C14.29 17.1907 14.62 17.8407 14.62 18.8107C14.62 20.2107 14.61 21.3507 14.61 21.6907C14.61 21.9707 14.8 22.3007 15.33 22.1907C19.5 20.8007 22.5 16.8707 22.5 12.2307C22.5 6.46074 17.8 1.76074 12 1.76074Z" fill="white"/>
+</svg>
+</i>
+                                            Github                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 1.56494C6.2 1.56494 1.5 6.26494 1.5 12.0649C1.5 17.3049 5.34 21.6449 10.36 22.4349V15.0949H7.69V12.0549H10.36V9.74494C10.36 7.11494 11.93 5.65494 14.33 5.65494C15.48 5.65494 16.68 5.86494 16.68 5.86494V8.44494H15.36C14.06 8.44494 13.65 9.25494 13.65 10.0849V12.0549H16.56L16.09 15.0949H13.64V22.4349C18.66 21.6449 22.5 17.3049 22.5 12.0649C22.5 6.26494 17.8 1.56494 12 1.56494Z" fill="white"/>
+</svg>
+</i>
+                                            Facebook                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Developers                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.7,4.3c-1.8-1.4-4-2.2-6.4-2.3L7,15.5L18.7,4.3z M20.1,5.6L13.3,12l6.7,6.4C23.3,14.7,23.3,9.3,20.1,5.6z
+     M9.7,3.5l-8.2,7.9c-0.2,2.5,0.7,5,2.3,7L9.7,3.5z M12,13.3l-6.7,6.4c3.9,3.1,9.6,3.1,13.5,0L12,13.3z"/>
+</svg>
+</i>
+                                            Forum                                        </b>
+                                        <p class="jt-typo--07">
+                                            Dev Forum                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.88992 21C16.2499 21 20.8199 14.08 20.8199 8.07C20.8199 7.87 20.8199 7.68 20.8099 7.48C21.6999 6.84 22.4699 6.04 23.0799 5.13C22.2699 5.49 21.3899 5.74 20.4699 5.85C21.4099 5.29 22.1299 4.4 22.4699 3.34C21.5899 3.86 20.6199 4.24 19.5799 4.44C18.7499 3.56 17.5699 3 16.2599 3C13.7499 3 11.7199 5.04 11.7199 7.54C11.7199 7.9 11.7599 8.24 11.8399 8.58C8.04992 8.39 4.69992 6.58 2.45992 3.83C2.06992 4.5 1.83992 5.28 1.83992 6.11C1.83992 7.69 2.63992 9.08 3.85992 9.89C3.10992 9.87 2.40992 9.66 1.79992 9.32C1.79992 9.34 1.79992 9.36 1.79992 9.38C1.79992 11.58 3.36992 13.42 5.44992 13.83C5.06992 13.93 4.66992 13.99 4.24992 13.99C3.95992 13.99 3.66992 13.96 3.39992 13.91C3.97992 15.72 5.65992 17.03 7.63992 17.07C6.07992 18.29 4.12992 19.02 1.99992 19.02C1.62992 19.02 1.26992 19 0.919922 18.96C2.92992 20.25 5.31992 21 7.88992 21Z" fill="white"/>
+</svg>
+</i>
+                                            Twitter                                        </b>
+                                        <p class="jt-typo--07">
+                                            Dev Twitter                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                        </ul><!-- .main-community__channel-list -->
+                </li>
+                            <li>
+                    <h3 class="jt-typo--01 main-community__channel-type">Social Media</h3>
+
+                    <ul class="main-community__channel-list">
+                                                                                    <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.88992 21C16.2499 21 20.8199 14.08 20.8199 8.07C20.8199 7.87 20.8199 7.68 20.8099 7.48C21.6999 6.84 22.4699 6.04 23.0799 5.13C22.2699 5.49 21.3899 5.74 20.4699 5.85C21.4099 5.29 22.1299 4.4 22.4699 3.34C21.5899 3.86 20.6199 4.24 19.5799 4.44C18.7499 3.56 17.5699 3 16.2599 3C13.7499 3 11.7199 5.04 11.7199 7.54C11.7199 7.9 11.7599 8.24 11.8399 8.58C8.04992 8.39 4.69992 6.58 2.45992 3.83C2.06992 4.5 1.83992 5.28 1.83992 6.11C1.83992 7.69 2.63992 9.08 3.85992 9.89C3.10992 9.87 2.40992 9.66 1.79992 9.32C1.79992 9.34 1.79992 9.36 1.79992 9.38C1.79992 11.58 3.36992 13.42 5.44992 13.83C5.06992 13.93 4.66992 13.99 4.24992 13.99C3.95992 13.99 3.66992 13.96 3.39992 13.91C3.97992 15.72 5.65992 17.03 7.63992 17.07C6.07992 18.29 4.12992 19.02 1.99992 19.02C1.62992 19.02 1.26992 19 0.919922 18.96C2.92992 20.25 5.31992 21 7.88992 21Z" fill="white"/>
+</svg>
+</i>
+                                            Twitter                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Global                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.88992 21C16.2499 21 20.8199 14.08 20.8199 8.07C20.8199 7.87 20.8199 7.68 20.8099 7.48C21.6999 6.84 22.4699 6.04 23.0799 5.13C22.2699 5.49 21.3899 5.74 20.4699 5.85C21.4099 5.29 22.1299 4.4 22.4699 3.34C21.5899 3.86 20.6199 4.24 19.5799 4.44C18.7499 3.56 17.5699 3 16.2599 3C13.7499 3 11.7199 5.04 11.7199 7.54C11.7199 7.9 11.7599 8.24 11.8399 8.58C8.04992 8.39 4.69992 6.58 2.45992 3.83C2.06992 4.5 1.83992 5.28 1.83992 6.11C1.83992 7.69 2.63992 9.08 3.85992 9.89C3.10992 9.87 2.40992 9.66 1.79992 9.32C1.79992 9.34 1.79992 9.36 1.79992 9.38C1.79992 11.58 3.36992 13.42 5.44992 13.83C5.06992 13.93 4.66992 13.99 4.24992 13.99C3.95992 13.99 3.66992 13.96 3.39992 13.91C3.97992 15.72 5.65992 17.03 7.63992 17.07C6.07992 18.29 4.12992 19.02 1.99992 19.02C1.62992 19.02 1.26992 19 0.919922 18.96C2.92992 20.25 5.31992 21 7.88992 21Z" fill="white"/>
+</svg>
+</i>
+                                            Twitter                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Korea                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8561 4.56049C22.5561 7.72049 21.2561 15.4005 20.5861 18.9405C20.3061 20.4405 19.7561 20.9405 19.2161 20.9905C18.0561 21.1005 17.1761 20.2205 16.0461 19.4905C14.2861 18.3405 13.2961 17.6205 11.5861 16.4905C9.61613 15.1905 10.8961 14.4705 12.0161 13.3005C12.3061 12.9905 17.4261 8.34049 17.5261 7.92049C17.5361 7.87049 17.5561 7.67049 17.4361 7.57049C17.3161 7.47049 17.1461 7.50049 17.0261 7.53049C16.8461 7.57049 14.0361 9.43049 8.58613 13.1105C7.78613 13.6605 7.06613 13.9305 6.41613 13.9105C5.70613 13.8905 4.32613 13.5105 3.30613 13.1705C2.05613 12.7605 1.06613 12.5505 1.14613 11.8505C1.18613 11.4905 1.68613 11.1205 2.63613 10.7405C8.46613 8.21049 12.3561 6.53049 14.3061 5.73049C19.8561 3.41049 21.0061 3.01049 21.7661 3.00049C21.9361 3.00049 22.2961 3.04049 22.5361 3.23049C22.7361 3.39049 22.7961 3.62049 22.8161 3.77049C22.8461 3.93049 22.8761 4.28049 22.8461 4.56049H22.8561Z" fill="white"/>
+</svg>
+</i>
+                                            Telegram                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Global                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.8561 4.56049C22.5561 7.72049 21.2561 15.4005 20.5861 18.9405C20.3061 20.4405 19.7561 20.9405 19.2161 20.9905C18.0561 21.1005 17.1761 20.2205 16.0461 19.4905C14.2861 18.3405 13.2961 17.6205 11.5861 16.4905C9.61613 15.1905 10.8961 14.4705 12.0161 13.3005C12.3061 12.9905 17.4261 8.34049 17.5261 7.92049C17.5361 7.87049 17.5561 7.67049 17.4361 7.57049C17.3161 7.47049 17.1461 7.50049 17.0261 7.53049C16.8461 7.57049 14.0361 9.43049 8.58613 13.1105C7.78613 13.6605 7.06613 13.9305 6.41613 13.9105C5.70613 13.8905 4.32613 13.5105 3.30613 13.1705C2.05613 12.7605 1.06613 12.5505 1.14613 11.8505C1.18613 11.4905 1.68613 11.1205 2.63613 10.7405C8.46613 8.21049 12.3561 6.53049 14.3061 5.73049C19.8561 3.41049 21.0061 3.01049 21.7661 3.00049C21.9361 3.00049 22.2961 3.04049 22.5361 3.23049C22.7361 3.39049 22.7961 3.62049 22.8161 3.77049C22.8461 3.93049 22.8761 4.28049 22.8461 4.56049H22.8561Z" fill="white"/>
+</svg>
+</i>
+                                            Telegram                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Korea                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M13.2,10.4c0.1-0.1,0.1-0.1,0.1-0.1c1.1-1.6,2.7-2.1,4.6-1.8c2.2,0.3,3.6,1.8,3.9,4.2c0.1,0.6,0.1,1.1,0.1,1.7
+    c0,2.3,0,4.6,0,6.9c0,0.3-0.1,0.3-0.3,0.3c-1.2,0-2.4,0-3.6,0c-0.3,0-0.3-0.1-0.3-0.3c0-2.2,0-4.3,0-6.5c0-0.5,0-1-0.2-1.5
+    c-0.4-1.5-2.2-2.1-3.4-1c-0.7,0.5-0.9,1.3-0.9,2.1c0,2,0,4.1,0,6.1c0,0.3,0,0.5,0,0.8c0,0.2-0.1,0.3-0.3,0.3c-1.2,0-2.5,0-3.7,0
+    c-0.2,0-0.3,0-0.3-0.3c0-1.8,0-3.7,0-5.5c0-2.3,0-4.5,0-6.8c0-0.2,0.1-0.3,0.3-0.3c1.2,0,2.5,0,3.7,0c0.2,0,0.3,0.1,0.3,0.3
+    C13.2,9.4,13.2,9.8,13.2,10.4L13.2,10.4z M6.6,15.1c0,2,0,4.1,0,6.1c0,0.2-0.1,0.3-0.3,0.3c-1.2,0-2.5,0-3.7,0c-0.2,0-0.3,0-0.3-0.3
+    c0-4.1,0-8.2,0-12.3c0-0.2,0-0.3,0.3-0.3c1.2,0,2.5,0,3.7,0c0.2,0,0.3,0.1,0.3,0.3C6.6,11,6.6,13.1,6.6,15.1L6.6,15.1z M4.4,2.4
+    c1.6,0,2.7,1.3,2.3,2.8C6.5,6.4,5.3,7.1,3.9,6.9c-1.5-0.2-2.3-1.7-1.7-3C2.5,3,3.4,2.4,4.4,2.4z"/>
+</svg>
+</i>
+                                            Linkedin                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Foundation                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 1.56494C6.2 1.56494 1.5 6.26494 1.5 12.0649C1.5 17.3049 5.34 21.6449 10.36 22.4349V15.0949H7.69V12.0549H10.36V9.74494C10.36 7.11494 11.93 5.65494 14.33 5.65494C15.48 5.65494 16.68 5.86494 16.68 5.86494V8.44494H15.36C14.06 8.44494 13.65 9.25494 13.65 10.0849V12.0549H16.56L16.09 15.0949H13.64V22.4349C18.66 21.6449 22.5 17.3049 22.5 12.0649C22.5 6.26494 17.8 1.56494 12 1.56494Z" fill="white"/>
+</svg>
+</i>
+                                            Facebook                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Official                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.4951 12.1651C23.4951 10.7651 22.3751 9.64512 20.9751 9.64512C20.2851 9.64512 19.6851 9.91512 19.2251 10.3551C17.4951 9.12512 15.1451 8.32512 12.5051 8.21512L13.6551 2.81512L17.4151 3.60512C17.4651 4.56512 18.2351 5.30512 19.1951 5.30512C20.1551 5.30512 20.9751 4.51512 20.9751 3.52512C20.9751 2.53512 20.1851 1.74512 19.1951 1.74512C18.4851 1.74512 17.8751 2.15512 17.5751 2.75512L13.4051 1.88512C13.2651 1.85512 13.1551 1.88512 13.0751 1.93512C12.9651 1.98512 12.9151 2.09512 12.8851 2.23512L11.5951 8.23512C8.90512 8.31512 6.52512 9.11512 4.76512 10.3751C4.32512 9.93512 3.69512 9.66512 3.01512 9.66512C1.61512 9.66512 0.495117 10.7851 0.495117 12.1851C0.495117 13.1951 1.09512 14.0751 1.97512 14.4651C1.92512 14.7151 1.92512 14.9551 1.92512 15.2351C1.92512 19.1051 6.42512 22.2551 11.9851 22.2551C17.5451 22.2551 22.0451 19.1251 22.0451 15.2351C22.0451 14.9851 22.0151 14.7151 21.9951 14.4651C22.8751 14.0851 23.5051 13.1751 23.5051 12.1651H23.4951ZM6.25512 13.9451C6.25512 12.9551 7.04512 12.1651 8.03512 12.1651C9.02512 12.1651 9.81512 12.9551 9.81512 13.9451C9.81512 14.9351 9.02512 15.7251 8.03512 15.7251C7.07512 15.7551 6.25512 14.9351 6.25512 13.9451ZM16.2851 18.7151C15.0551 19.9451 12.6951 20.0351 12.0351 20.0351C11.3251 20.0351 8.99512 19.9251 7.78512 18.7151C7.59512 18.5251 7.59512 18.2451 7.78512 18.0551C7.97512 17.8651 8.25512 17.8651 8.44512 18.0551C9.23512 18.8451 10.8851 19.0951 12.0351 19.0951C13.1851 19.0951 14.8851 18.8251 15.6251 18.0551C15.8151 17.8651 16.0951 17.8651 16.2851 18.0551C16.4451 18.2151 16.4451 18.5251 16.2851 18.7151ZM15.9551 15.7551C14.9651 15.7551 14.1751 14.9651 14.1751 13.9751C14.1751 12.9851 14.9651 12.1951 15.9551 12.1951C16.9451 12.1951 17.7351 12.9851 17.7351 13.9751C17.7351 14.9651 16.9451 15.7551 15.9551 15.7551Z" fill="white"/>
+</svg>
+</i>
+                                            Reddit                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="#" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5978 4.71569C21.5447 4.96794 22.2898 5.71693 22.5421 6.67159C23 8.39853 22.9961 11.9999 22.9961 11.9999C22.9961 11.9999 22.9961 15.6012 22.5382 17.3281C22.2859 18.2789 21.5408 19.0279 20.5939 19.284C18.8786 19.7459 11.9981 19.7459 11.9981 19.7459C11.9981 19.7459 5.11748 19.7459 3.40219 19.284C2.45528 19.0318 1.71018 18.2828 1.45793 17.3281C1 15.6012 1 11.9999 1 11.9999C1 11.9999 1 8.39853 1.46181 6.66771C1.71406 5.71693 2.45916 4.96794 3.40607 4.71181C5.12136 4.25 12.0019 4.25 12.0019 4.25C12.0019 4.25 18.8786 4.25 20.5978 4.71569ZM9.75098 8.72852V15.2715L15.5023 12L9.75098 8.72852Z" fill="white"/>
+</svg>
+</i>
+                                            Youtube                                        </b>
+                                        <p class="jt-typo--07">
+                                            CTFCoin Official                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                        </ul><!-- .main-community__channel-list -->
+                </li>
+                            <li>
+                    <h3 class="jt-typo--01 main-community__channel-type">Contact</h3>
+
+                    <ul class="main-community__channel-list">
+                                                                                    <li>
+                                    <a href="mailto:&#112;a&#114;tner&#115;h&#105;p&#064;kla&#121;&#116;n.&#102;&#111;&#117;n&#100;&#097;&#116;&#105;&#111;n" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.6,20.6c-0.6,0-1.1-0.2-1.5-0.6c-0.4-0.4-0.6-0.9-0.6-1.5V5.6C1.5,5,1.7,4.5,2.1,4C2.5,3.6,3,3.4,3.6,3.4 h16.8c0.6,0,1.1,0.2,1.5,0.6c0.4,0.4,0.6,0.9,0.6,1.5v12.9c0,0.6-0.2,1.1-0.6,1.5c-0.4,0.4-0.9,0.6-1.5,0.6H3.6z M12,13.1l8.4-5.4 V5.6L12,10.9L3.6,5.6v2.1L12,13.1z" fill="white"/>
+</svg>
+</i>
+                                            Business                                        </b>
+                                        <p class="jt-typo--07">
+                                            Business development and partnerships enquiries                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="mailto:&#107;&#114;_mar&#107;&#101;&#116;ing&#064;&#107;l&#097;&#121;&#116;&#110;.&#102;&#111;&#117;nd&#097;&#116;i&#111;&#110;" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.6,20.6c-0.6,0-1.1-0.2-1.5-0.6c-0.4-0.4-0.6-0.9-0.6-1.5V5.6C1.5,5,1.7,4.5,2.1,4C2.5,3.6,3,3.4,3.6,3.4 h16.8c0.6,0,1.1,0.2,1.5,0.6c0.4,0.4,0.6,0.9,0.6,1.5v12.9c0,0.6-0.2,1.1-0.6,1.5c-0.4,0.4-0.9,0.6-1.5,0.6H3.6z M12,13.1l8.4-5.4 V5.6L12,10.9L3.6,5.6v2.1L12,13.1z" fill="white"/>
+</svg>
+</i>
+                                            Marketing                                        </b>
+                                        <p class="jt-typo--07">
+                                            Joint marketing initiatives and events enquiries                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                                                                <li>
+                                    <a href="mailto:&#109;edia&#064;kla&#121;tn.&#102;&#111;und&#097;&#116;i&#111;&#110;" target="_blank" rel="noopener">
+                                        <b class="jt-typo--04">
+                                            <i class="jt-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.6,20.6c-0.6,0-1.1-0.2-1.5-0.6c-0.4-0.4-0.6-0.9-0.6-1.5V5.6C1.5,5,1.7,4.5,2.1,4C2.5,3.6,3,3.4,3.6,3.4 h16.8c0.6,0,1.1,0.2,1.5,0.6c0.4,0.4,0.6,0.9,0.6,1.5v12.9c0,0.6-0.2,1.1-0.6,1.5c-0.4,0.4-0.9,0.6-1.5,0.6H3.6z M12,13.1l8.4-5.4 V5.6L12,10.9L3.6,5.6v2.1L12,13.1z" fill="white"/>
+</svg>
+</i>
+                                            Media                                        </b>
+                                        <p class="jt-typo--07">
+                                            Media and press enquiries                                            <i class="jt-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/>
+</svg>
+</i>
+                                        </p>
+                                    </a>
+                                </li>
+                                                                        </ul><!-- .main-community__channel-list -->
+                </li>
+                    </ul><!-- .main-community__channel -->
+
+        <ul class="main-community__banner">
+            <li>
+                <div class="main-community__banner-content">
+                    <div class="main-community__banner-txt">
+                        <h3 class="jt-typo--01 main-community__banner-title">WE'RE ALWAYS OPEN TO YOUR IDEAS</h3>
+                        <p class="jt-typo--04 main-community__banner-desc">Want to work with the CTFCoin Foundation? Do you have an idea you want to share? <br />Feel free to reach out to us.</p>
+                    </div><!-- .main-community__banner-txt -->
+
+                    <div class="main-community__banner-link">
+                        <a href="#" class="jt-btn__basic jt-btn--type-02"><span>Learn More</span></a>
+                    </div><!-- .main-community__banner-link -->
+                </div><!-- .main-community__banner-content -->
+            </li>
+        </ul><!-- .main-community__banner -->
+    </div><!-- .wrap -->
+</div><!-- .main-community -->
+
+    </main><!-- .main_container -->
+
+    <footer id="footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="#" style="color: white; font-weight: bold;">
+                            CTFCoin
+                        </a>
+                    </div><!-- .footer__logo -->
+
+                    <ul class="footer__family">
+                        <li><a href="#" target="_blank" rel="noopener"><span>CTFCoin DevPortal</span><i class="jt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10,15.5L8.9,14.5L13.7,9.8L1.5,9.8L1.5,8.2L13.7,8.2L8.9,3.5L10,2.5L15.5,7.9L15.5,7.9L16.5,9"/>
+</svg>
+</i></a></li>
+                        <li><a href="#" target="_blank" rel="noopener"><span>CTFCoin Square</span><i class="jt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10,15.5L8.9,14.5L13.7,9.8L1.5,9.8L1.5,8.2L13.7,8.2L8.9,3.5L10,2.5L15.5,7.9L15.5,7.9L16.5,9"/>
+</svg>
+</i></a></li>
+                        <li><a href="#" target="_blank" rel="noopener"><span>CTFCoin Governance forum</span><i class="jt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10,15.5L8.9,14.5L13.7,9.8L1.5,9.8L1.5,8.2L13.7,8.2L8.9,3.5L10,2.5L15.5,7.9L15.5,7.9L16.5,9"/>
+</svg>
+</i></a></li>
+                    </ul><!-- .footer__family -->
+                </div><!-- .footer__about -->
+
+                <nav class="footer__sitemap">
+                    <ul id="sitemap-menu" class="menu"><li class="menu-item--developer menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-54"><a href="#"><span>Developer</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+<ul class="sub-menu">
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener" href="#"><span>Docs</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a target="_blank" rel="noopener" href="#"><span>Getting Started</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a target="_blank" rel="noopener" href="#"><span>Developer Tools</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a target="_blank" rel="noopener" href="#"><span>Light paper</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a target="_blank" rel="noopener" href="#"><span>API Service Status</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+</ul>
+</li>
+<li class="menu-item--ecosystem menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-55"><a href="#"><span>Ecosystem</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+<ul class="sub-menu">
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="/ecosystem"><span>Explore</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-67"><a target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSeUjDmhxeWjaB33BUoIaA7vuwALgQTyhzTaVkEhmU51B4hhag/viewform"><span>Submit project</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+</ul>
+</li>
+<li class="menu-item--governance menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56"><a href="/Governance"><span>Governance</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+<ul class="sub-menu">
+    <li class="menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-68"><a href="#"><span>Grant</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+    <ul class="sub-menu">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="/governance"><span>KCF</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70"><a target="_blank" rel="noopener" href="#"><span>KFF</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a target="_blank" rel="noopener" href=""><span>PoC (Upcoming)</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    </ul>
+</li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a href="/governance/#governance"><span>Governance Council</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+</ul>
+</li>
+<li class="menu-item--blog menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-57"><a href="#"><span>Blog</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+<ul class="sub-menu">
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a href="/blog/?blog_category=news#blogs"><span>News</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="/blog/?blog_category=technology#blogs"><span>Tech</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/blog/?blog_category=ecosystem#blogs"><span>Ecosystem</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="/blog/?blog_category=community#blogs"><span>Community</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="/blog/?blog_category=tutorials#blogs"><span>Tutorials</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+</ul>
+</li>
+<li class="menu-item--community menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-58"><a href="#"><span>Community</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+<ul class="sub-menu">
+    <li class="menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79"><a href="#"><span>Social Media</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+    <ul class="sub-menu">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82"><a target="_blank" rel="noopener" href="#"><span>Twitter EN</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a target="_blank" rel="noopener" href="#"><span>Twitter KR</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a target="_blank" rel="noopener" href="#"><span>Telegram EN</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16646"><a target="_blank" rel="noopener" href="#"><span>Telegram KR</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83"><a target="_blank" rel="noopener" href="#"><span>Linkedin</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16647"><a target="_blank" rel="noopener" href="#"><span>Facebook</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a target="_blank" rel="noopener" href="#"><span>Reddit</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16648"><a target="_blank" rel="noopener" href="#"><span>YouTube</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    </ul>
+</li>
+    <li class="menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-86"><a href="#"><span>Development</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+    <ul class="sub-menu">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a target="_blank" rel="noopener" href="#"><span>Discord</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a target="_blank" rel="noopener" href="#"><span>Github</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89"><a target="_blank" rel="noopener" href="#"><span>Facebook Developer Group</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90"><a target="_blank" rel="noopener" href="#"><span>CTFCoin Developer Forum</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16649"><a target="_blank" rel="noopener" href="#"><span>Dev Twitter</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    </ul>
+</li>
+</ul>
+</li>
+<li class="menu-item--service menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59"><a href="#"><span>Service</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+<ul class="sub-menu">
+    <li class="menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-92"><a href="#"><span>Explorer</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+    <ul class="sub-menu">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a target="_blank" rel="noopener" href="#"><span>CTFCoin scope</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-94"><a target="_blank" rel="noopener" href="#"><span>CTFCoin finder</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    </ul>
+</li>
+    <li class="menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98"><a href="#"><span>API</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+    <ul class="sub-menu">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-99"><a target="_blank" rel="noopener" href="#"><span>KAS</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101"><a target="_blank" rel="noopener" href="#"><span>Tatum</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    </ul>
+</li>
+    <li class="menu-item--label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95"><a href="#"><span>Wallet</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a>
+    <ul class="sub-menu">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-96"><a target="_blank" rel="noopener" href="#"><span>CTFCoin</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97"><a target="_blank" rel="noopener" href="https://www.kakaocorp.com/page/service/service/Klip"><span>Klip</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+    </ul>
+</li>
+</ul>
+</li>
+</ul>                </nav><!-- .footer__sitemap -->
+            </div><!-- .footer__top -->
+
+            <div class="footer__bottom">
+                <div class="footer__language">
+                    <div class="footer__language__select">
+                        <i class="jt-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.9,1.5C7.2,1.5,1.6,7,1.6,13.8c0,6.8,5.5,12.3,12.3,12.3c6.8,0,12.3-5.5,12.3-12.3C26.2,7,20.7,1.5,13.9,1.5
+    z M23.1,12.3h-3.9c-0.1-2.9-0.8-5.2-1.4-6.9C20.5,6.6,22.6,9.2,23.1,12.3z M13.9,23.1C13.9,23.1,13.9,23.1,13.9,23.1
+    c-1.3-2.9-2-5.5-2.2-7.8h4.4C15.9,17.6,15.3,20.2,13.9,23.1C13.9,23.1,13.9,23.1,13.9,23.1z M11.7,12.3c0.2-3.9,1.5-6.6,2.1-7.8
+    c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.1,0c0.7,1.2,1.9,3.9,2.1,7.8H11.7z M10.1,5.4c-0.7,1.7-1.3,4.1-1.4,7H4.8C5.3,9.2,7.3,6.6,10.1,5.4z
+     M4.8,15.3h3.9c0.2,2.2,0.7,4.5,1.6,7.1C7.4,21.2,5.3,18.5,4.8,15.3z M17.5,22.4c1-2.5,1.5-4.9,1.6-7.1h3.9
+    C22.6,18.5,20.4,21.2,17.5,22.4z"/>
+</svg>
+</i>
+                        <div class="jt-selectric__wrap">
+                            <select class="jt-selectric">
+                                <option selected value="#" >ENG</option>
+                                <option  value="#" >RUS</option>
+                            </select><!-- .jt-selectric -->
+                        </div><!-- .jt-selectric__wrap -->
+                    </div><!-- .footer__language__select -->
+                </div><!-- footer__language -->
+
+                <nav class="footer__menu-container">
+                    <ul id="footer-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="#"><span>Brand</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a target="_blank" rel="noopener"><span>Careers</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49"><a href="/community/#contact"><span>Contact</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+<li class="menu-item--private menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-46"><a href="CTFCoin"><span>Privacy Policy</span><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,8.9L1.1,8.2l6.1-6.1H1.4v-1h7.5l0,0v0.5v7h-1V2.8L1.8,8.9z"/></svg></i></a></li>
+</ul>                </nav><!-- .footer__menu-container -->
+
+                <p class="footer__copyright">&copy; CTFCoin 2023. All rights reserved.</p>
+            </div><!-- .footer__bottom -->
+        </div><!-- .wrap -->
+    </footer>
+
+
+    <script id="lava-vertex" type="x-shader/x-vertex">
+        uniform vec2 uvScale;
+        varying vec2 vUv;
+
+        void main() {
+            vUv = uvScale * uv;
+            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+            gl_Position = projectionMatrix * mvPosition;
+
+        }
+    </script>
+
+    <script id="lava-fragment" type="x-shader/x-fragment">
+        uniform float time;
+
+        uniform sampler2D texture1;
+        uniform sampler2D texture2;
+
+        uniform float colorFadeProgress;
+
+        varying vec2 vUv;
+
+        void main( void ) {
+
+            vec2 position = - 1.0 + 2.0 * vUv;
+
+            vec4 noise = texture2D( texture1, vUv );
+            vec2 T1 = vUv + vec2( 1.5, - 1.5 ) * time * 0.02;
+            vec2 T2 = vUv + vec2( - 1.5, 0.5 ) * time * 0.01;
+
+            T1.x += noise.x * 2.0;
+            T1.y += noise.y * 2.0;
+            T2.x -= noise.y * 0.2;
+            T2.y += noise.z * 0.2;
+
+            float p = texture2D( texture1, T1 * 2.0 ).a;
+
+            vec4 color = texture2D( texture2, T2 * 2.0 );
+            //vec4 fromColor = vec4(1.0,1.0,1.0,1.0);
+            vec4 fromColor = vec4(1,0.76,0.54,1.0);
+
+            vec4 temp = mix(fromColor, color * ( vec4( p, p, p, p ) * 2.0 ) + ( color * color - 0.1 ), colorFadeProgress);
+
+            if( temp.r > 1.0 ) { temp.bg += clamp( temp.r - 2.0, 0.0, 100.0 ); }
+            if( temp.g > 1.0 ) { temp.rb += temp.g - 1.0; }
+            if( temp.b > 1.0 ) { temp.rg += temp.b - 1.0; }
+
+            gl_FragColor = temp;
+
+        }
+    </script>
+
+
+    <script id="spark-vertex" type="x-shader/x-vertex">
+        void main() {
+            gl_Position = vec4( position, 1.0 );
+        }
+    </script>
+    <script id="spark-fragment" type="x-shader/x-fragment">
+
+    //Shader License: CC BY 3.0
+    //Author: Jan Mróz (jaszunio15)  https://www.shadertoy.com/view/wl2Gzc
+    //Shadertoy to Threejs : Nico (studio-jt) 
+
+    uniform float iTime;
+    uniform vec2 mouse;
+    uniform vec2 iResolution;
+    varying vec2 surfacePosition;
+
+
+
+    #define PI 3.1415927
+    #define TWO_PI 6.283185
+
+    #define ANIMATION_SPEED 0.8
+    #define MOVEMENT_SPEED 0.3
+    #define MOVEMENT_DIRECTION_X -0.85
+    #define MOVEMENT_DIRECTION_Y -1.0
+    #define MOVEMENT_DIRECTION vec2(MOVEMENT_DIRECTION_X, MOVEMENT_DIRECTION_Y)
+
+    #define PARTICLE_SIZE 0.0015
+
+    #define PARTICLE_SCALE (vec2(0.3, 1.0))
+    #define PARTICLE_SCALE_VAR (vec2(0.25, 0.2))
+
+    #define PARTICLE_BLOOM_SCALE (vec2(0.5, 0.8))
+    #define PARTICLE_BLOOM_SCALE_VAR (vec2(0.3, 0.1))
+
+    #define SPARK_COLOR vec3(1.0, 0.4, 0.05) * 1.5
+    #define BLOOM_COLOR vec3(1.0, 0.4, 0.05) * 0.8
+    #define SMOKE_COLOR vec3(1.0, 0.43, 0.1) * 0.8
+
+    #define SIZE_MOD 1.15
+    #define ALPHA_MOD 0.8
+    #define LAYERS_COUNT 15
+
+
+    //#define ANIMATION_SPEED 1.5
+    //#define MOVEMENT_SPEED 1.0
+    //#define MOVEMENT_DIRECTION vec2(0.7, -1.0)
+
+    //#define PARTICLE_SIZE 0.003
+
+    //#define PARTICLE_SCALE (vec2(0.5, 1.6))
+    //#define PARTICLE_SCALE_VAR (vec2(0.25, 0.2))
+
+    //#define PARTICLE_BLOOM_SCALE (vec2(0.5, 0.8))
+    //#define PARTICLE_BLOOM_SCALE_VAR (vec2(0.3, 0.1))
+
+    //#define SPARK_COLOR vec3(1.0, 0.4, 0.05) * 1.5
+    //#define BLOOM_COLOR vec3(1.0, 0.4, 0.05) * 0.8
+    //#define SMOKE_COLOR vec3(1.0, 0.43, 0.1) * 0.8
+
+    //#define SIZE_MOD 1.05
+    //#define ALPHA_MOD 0.9
+    //#define LAYERS_COUNT 15
+
+
+
+
+    float hash1_2(in vec2 x)
+    {
+        return fract(sin(dot(x, vec2(52.127, 61.2871))) * 521.582);   
+    }
+
+    vec2 hash2_2(in vec2 x)
+    {
+        return fract(sin(x * mat2(20.52, 24.1994, 70.291, 80.171)) * 492.194);
+    }
+
+    //Simple interpolated noise
+    vec2 noise2_2(vec2 uv)
+    {
+        //vec2 f = fract(uv);
+        vec2 f = smoothstep(0.0, 1.0, fract(uv));
+
+        vec2 uv00 = floor(uv);
+        vec2 uv01 = uv00 + vec2(0,1);
+        vec2 uv10 = uv00 + vec2(1,0);
+        vec2 uv11 = uv00 + 1.0;
+        vec2 v00 = hash2_2(uv00);
+        vec2 v01 = hash2_2(uv01);
+        vec2 v10 = hash2_2(uv10);
+        vec2 v11 = hash2_2(uv11);
+
+        vec2 v0 = mix(v00, v01, f.y);
+        vec2 v1 = mix(v10, v11, f.y);
+        vec2 v = mix(v0, v1, f.x);
+
+        return v;
+    }
+
+    //Simple interpolated noise
+    float noise1_2(in vec2 uv)
+    {
+        vec2 f = fract(uv);
+        //vec2 f = smoothstep(0.0, 1.0, fract(uv));
+
+        vec2 uv00 = floor(uv);
+        vec2 uv01 = uv00 + vec2(0,1);
+        vec2 uv10 = uv00 + vec2(1,0);
+        vec2 uv11 = uv00 + 1.0;
+
+        float v00 = hash1_2(uv00);
+        float v01 = hash1_2(uv01);
+        float v10 = hash1_2(uv10);
+        float v11 = hash1_2(uv11);
+
+        float v0 = mix(v00, v01, f.y);
+        float v1 = mix(v10, v11, f.y);
+        float v = mix(v0, v1, f.x);
+
+        return v;
+    }
+
+    float layeredNoise1_2(in vec2 uv, in float sizeMod, in float alphaMod, in int layers, in float animation)
+    {
+        float noise = 0.0;
+        float alpha = 1.0;
+        float size = 1.0;
+        vec2 offset;
+        const int _layers = 3;
+
+        for (int i = 0; i < _layers; i++)
+        {
+            offset += hash2_2(vec2(alpha, size)) * 10.0;
+
+            //Adding noise with movement
+            noise += noise1_2(uv * size + iTime * animation * 8.0 * MOVEMENT_DIRECTION * MOVEMENT_SPEED + offset) * alpha;
+            alpha *= alphaMod;
+            size *= sizeMod;
+        }
+
+        noise *= (1.0 - alphaMod)/(1.0 - pow(alphaMod, float(layers)));
+        return noise;
+    }
+
+    //Rotates point around 0,0
+    vec2 rotate(in vec2 point, in float deg)
+    {
+        float s = sin(deg);
+        float c = cos(deg);
+        return mat2(s, c, -c, s) * point;
+    }
+
+    //Cell center from point on the grid
+    vec2 voronoiPointFromRoot(in vec2 root, in float deg)
+    {
+        vec2 point = hash2_2(root) - 0.5;
+        float s = sin(deg);
+        float c = cos(deg);
+        point = mat2(s, c, -c, s) * point * 0.66;
+        point += root + 0.5;
+        return point;
+    }
+
+    //Voronoi cell point rotation degrees
+    float degFromRootUV(in vec2 uv)
+    {
+        return iTime * ANIMATION_SPEED * (hash1_2(uv) - 0.5) * 2.0;   
+    }
+
+    vec2 randomAround2_2(in vec2 point, in vec2 range, in vec2 uv)
+    {
+        return point + (hash2_2(uv) - 0.5) * range;
+    }
+
+
+    vec3 fireParticles(in vec2 uv, in vec2 originalUV)
+    {
+        vec3 particles = vec3(0.0);
+        vec2 rootUV = floor(uv);
+        float deg = degFromRootUV(rootUV);
+        vec2 pointUV = voronoiPointFromRoot(rootUV, deg);
+        float dist = 3.0; 
+        float distBloom = 0.0;
+
+        //UV manipulation for the faster particle movement
+        vec2 tempUV = uv + (noise2_2(uv * 2.0) - 0.5) * 0.1;
+        tempUV += -(noise2_2(uv * 3.0 + iTime) - 0.5) * 0.05;
+
+        //Sparks sdf
+        dist = length(rotate(tempUV - pointUV, MOVEMENT_DIRECTION_X) * randomAround2_2(PARTICLE_SCALE, PARTICLE_SCALE_VAR, rootUV));
+
+        //Bloom sdf
+        distBloom = length(rotate(tempUV - pointUV, MOVEMENT_DIRECTION_X) * randomAround2_2(PARTICLE_BLOOM_SCALE, PARTICLE_BLOOM_SCALE_VAR, rootUV));
+
+        //Add sparks
+        particles += (1.0 - smoothstep(PARTICLE_SIZE * 0.6, PARTICLE_SIZE * 3.0, dist)) * SPARK_COLOR;
+
+        //Add bloom
+        particles += pow((1.0 - smoothstep(0.0, PARTICLE_SIZE * 6.0, distBloom)) * 1.0, 3.0) * BLOOM_COLOR;
+
+        //Upper disappear curve randomization
+        float border = (hash1_2(rootUV) - 0.5) * 1.2; // 2.0
+        float disappear = 1.0 - smoothstep(border, border + 0.5, originalUV.y);
+
+        //Lower appear curve randomization
+        border = (hash1_2(rootUV + 0.214) - 1.8) * 0.7;
+        float appear = smoothstep(border, border + 0.4, originalUV.y);
+
+        return particles * disappear * appear;
+    }
+
+
+    //Layering particles to imitate 3D view
+    vec3 layeredParticles(in vec2 uv, in float sizeMod, in float alphaMod, in int layers, in float smoke) 
+    { 
+        vec3 particles = vec3(0);
+        float size = 1.0;
+        float alpha = 1.0;
+        vec2 offset = vec2(0.0);
+        vec2 noiseOffset;
+        vec2 bokehUV;
+        const int _layers = 4;
+
+        for (int i = 0; i < _layers; i++)
+        {
+            //Particle noise movement
+            noiseOffset = ((noise2_2(uv * size * 2.0 + 0.5) - 0.5) * 0.15);
+
+            //UV with applied movement
+            bokehUV = (uv * size + iTime * MOVEMENT_DIRECTION * MOVEMENT_SPEED) + offset + noiseOffset; 
+
+            //Adding particles  if there is more smoke, remove smaller particles
+            particles += fireParticles(bokehUV, uv) * alpha * (1.0 - smoothstep(0.0, 1.0, smoke) * (float(i) / float(layers)));
+
+            //Moving uv origin to avoid generating the same particles
+            offset += hash2_2(vec2(alpha, alpha)) * 10.0;
+
+            alpha *= alphaMod;
+            size *= sizeMod;
+        }
+
+        return particles;
+    }
+
+    void mainImage( out vec4 fragColor, in vec2 fragCoord )
+    {
+        vec2 uv = (2.0 * fragCoord - iResolution.xy) / iResolution.x;
+
+        float vignette = 1.0 - smoothstep(0.4, 1.4, length(uv + vec2(0.0, 0.3)));
+
+        uv *= 1.8;
+
+        float smokeIntensity = layeredNoise1_2(uv * 10.0 + iTime * 4.0 * MOVEMENT_DIRECTION * MOVEMENT_SPEED, 1.7, 0.7, 6, 0.2);
+        smokeIntensity *= pow(1.0 - smoothstep(-1.0, 1.6, uv.y), 2.0); 
+        vec3 smoke = smokeIntensity * SMOKE_COLOR * 0.8 * vignette;
+
+        //Cutting holes in smoke
+        smoke *= pow(layeredNoise1_2(uv * 4.0 + iTime * 0.5 * MOVEMENT_DIRECTION * MOVEMENT_SPEED, 1.8, 0.5, 3, 0.2), 2.0) * 1.5;
+
+        vec3 particles = layeredParticles(uv, SIZE_MOD, ALPHA_MOD, LAYERS_COUNT, smokeIntensity);
+
+        vec3 col = particles + smoke + SMOKE_COLOR * 0.02;
+        col *= vignette;
+
+        col = smoothstep(-0.08, 1.0, col);
+
+        fragColor = vec4(col, 1.0);
+    }
+
+    void main() {
+        mainImage(gl_FragColor,gl_FragCoord.xy);
+    }
+    </script>
+    
+
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/vendors/jquery/jquery.min.js' id='jquery-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/vendors/greensock/gsap.min.js?ver=3.10.3' id='gsap-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/vendors/greensock/ScrollToPlugin.min.js?ver=3.10.3' id='scrolltoplugin-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/vendors/greensock/ScrollTrigger.min.js?ver=3.10.3' id='scrolltrigger-js'></script>
+    <script  src='https://klaytn.foundation/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/vendors/jt/jt-unveil.js?ver=1.0.0' id='jtunveil-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/vendors/select/jquery.selectric.js?ver=1.13.0' id='selectric-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/vendors/slider/swiper/swiper-bundle.min.js?ver=8.4.2' id='swiper-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/jt.js?ver=1.0' id='jt-js'></script>
+        
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/loaders/GLTFLoader.js?ver=1.0.2' id='three-gltfloader-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/controls/OrbitControls.js?ver=1.0.2' id='three-orbitcontrols-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/postprocessing/EffectComposer.js?ver=1.0.2' id='three-effectcomposer-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/postprocessing/ShaderPass.js?ver=1.0.2' id='three-shaderpass-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/postprocessing/RenderPass.js?ver=1.0.2' id='three-renderpass-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/shaders/CopyShader.js?ver=1.0.2' id='three-copyshader-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/shaders/LuminosityHighPassShader.js?ver=1.0.2' id='three-luminosityhighpassshader-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/shaders/FilmShader.js?ver=1.0.2' id='three-filmshader-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/shaders/BokehShader.js?ver=1.0.2' id='three-bokehshader-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/postprocessing/SSAARenderPass.js?ver=1.0.2' id='three-ssaarenderpass-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/postprocessing/FilmPass.js?ver=1.0.2' id='three-filmpass-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/postprocessing/UnrealBloomPass.js?ver=1.0.2' id='three-unrealbloompass-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/three/addons/postprocessing/BokehPass.js?ver=1.0.2' id='three-bokehpass-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/planet/js/main.js?ver=1.0.2' id='jt-planet-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/jt-strap.js?ver=1.0.2' id='jt-strap-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/main.js?ver=1.0.2' id='main-js'></script>
+    <script  src='https://klaytn.foundation/wp-content/themes/klaytn/js/api-data.js?ver=1.0.2' id='api-data-js'></script>
+    
+</body>
+</html>

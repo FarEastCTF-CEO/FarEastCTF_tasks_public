@@ -1,0 +1,314 @@
+; vim: filetype=nasm
+
+%ifndef VM_ROP_AMC
+%define VM_ROP_AMC
+
+%macro savesreg 0
+	push rbp
+	push rax
+	push rbx
+	push rcx
+	push rdx
+	push rdi
+	push rsi
+	push r8
+	push r9
+	push r10
+	push r12
+	push r13
+%endmacro
+
+%macro restorereg 0
+	pop r13
+	pop r12
+	pop r10
+	pop r9
+	pop r8
+	pop rsi
+	pop rdi
+	pop rdx
+	pop rcx
+	pop rbx
+	pop rax
+	pop rbp
+%endmacro
+
+%macro save_reg_to_mem 2
+	dq pop_r12
+	dq %1
+        dq mov_rax_%2
+        dq save_rax_r12
+%endmacro
+
+
+%macro save_rax_to_mem 1
+	dq pop_r12
+	dq %1
+	dq save_rax_r12
+%endmacro
+
+%macro get_val_to_rax 1
+	dq pop_rax
+	dq %1
+	dq deref
+%endmacro
+
+%macro place_val_to_reg 2
+	get_val_to_rax %1
+	place_rax %2
+%endmacro
+
+%macro place_rax 1
+	dq mov_%1_rax
+%endmacro
+
+%macro load_val 2
+	dq pop_%1
+	dq %2
+%endmacro
+
+%macro flaGZ 0
+	dq get_eflags
+	save_rax_to_mem cmp_res
+	load_val rax, cmp_res
+	load_val rbx, 1
+	dq add_rax_rbx
+	dq deref
+%endmacro	
+
+%macro compare_less 3
+	place_val_to_reg %2, rbx
+	get_val_to_rax %1
+	dq sub_rax_rbx
+	flaGZ
+	load_val rbx, 0x1
+	dq and_rax_rbx
+	save_rax_to_mem %3
+%endmacro
+
+%macro compare_eq_fast 3
+	place_val_to_reg %2, rbx
+	get_val_to_rax %1
+	dq sub_rax_rbx
+	flaGZ
+	dq extractZ
+	save_rax_to_mem %3
+%endmacro
+
+%macro eq_branch 3
+	get_val_to_rax %1
+	save_rax_to_mem cmp_res
+	place_val_to_reg %2, rbx
+	load_val rax, %3
+	dq jpz
+%endmacro
+
+%macro compare_equal 3
+	compare_less %1, %2, res1
+	compare_less %2, %1, res2
+	addvar res1, res2, %3
+%endmacro
+
+%macro branchZ 2
+	get_val_to_rax %1
+	load_val rbx, 1
+	dq and_rax_rbx
+	dq xor_rax_rbx
+	load_val rbx, %2-$-24
+	dq mul_rax_rbx
+	dq add_rsp
+%endmacro
+
+
+%macro add_imm 3
+	;load_val rbx, %2
+	;get_val_to_rax %1
+	;dq add_rax_rbx
+	;save_rax_to_mem %3
+	get_val_to_rax %1
+	dq add_rax_%2
+	save_rax_to_mem %3
+%endmacro
+
+%macro addvar 3
+	place_val_to_reg %1, rbx
+	get_val_to_rax %2
+	dq add_rax_rbx
+	save_rax_to_mem %3
+%endmacro
+
+%macro addvar_fast 2
+	load_val rbx, %2
+	load_val rax, %1
+	dq add_vars
+%endmacro
+
+%macro sub_imm 3
+	load_val rbx, %2
+	get_val_to_rax %1
+	dq sub_rax_rbx
+	save_rax_to_mem %3
+%endmacro
+
+%macro subvar 3
+	place_val_to_reg %2, rbx
+	get_val_to_rax %1
+	dq sub_rax_rbx
+	save_rax_to_mem %3
+%endmacro
+
+%macro branch 1
+	load_val rax, %1-$-16
+	dq add_rsp
+%endmacro
+
+%macro save_local 1
+	get_val_to_rax %1
+	dq save_r10_mem
+	dq inc_r10
+%endmacro
+
+%macro save_locals 0
+	save_local local1
+	save_local local2
+	save_local local3
+	save_local local4
+	save_local local5
+	save_local local6
+	save_local local7
+	save_local local8
+%endmacro
+
+%macro load_local 1
+	dq dec_r10
+	dq take_r10_mem
+	save_rax_to_mem %1
+%endmacro
+
+%macro load_locals 0
+	load_local local8
+	load_local local7
+	load_local local6
+	load_local local5
+	load_local local4
+	load_local local3
+	load_local local2
+	load_local local1
+%endmacro
+
+%macro callFunc 1
+	save_locals
+	load_val rbx, 8
+	dq mov_rax_r8
+	dq add_rax_rbx
+	dq mov_r8_rax
+	load_val rax, $+40
+	dq save_r8_mem
+	load_val rax, %1
+	dq change_stack	
+%endmacro
+
+%macro callFunc2 1
+	load_val rbx, 8
+	dq mov_rax_r8
+	dq add_rax_rbx
+	dq mov_r8_rax
+	load_val rax, $+40
+	dq save_r8_mem
+	load_val rax, %1
+	dq change_stack
+%endmacro
+	
+%macro Restore2 0
+	dq take_r8_mem
+	save_rax_to_mem res1
+	dq mov_rax_r8
+	load_val rbx, 8
+	dq sub_rax_rbx
+	dq mov_r8_rax
+	get_val_to_rax res1
+	dq change_stack
+%endmacro
+	
+%macro Restore 0
+	load_locals
+	dq take_r8_mem
+	save_rax_to_mem res1
+	dq mov_rax_r8
+	load_val rbx, 8
+	dq sub_rax_rbx
+	dq mov_r8_rax
+	get_val_to_rax res1
+	dq change_stack	
+%endmacro
+
+%macro get_struct_shift 2
+	load_val rbx, %2
+	get_val_to_rax %1
+	dq add_rax_rbx
+%endmacro
+
+%macro take_byte_offset 2
+	place_val_to_reg %2, rbx
+	get_val_to_rax %1
+	dq add_rax_rbx
+	dq deref
+	load_val rbx, 0xff
+	dq and_rax_rbx
+%endmacro
+
+%macro take_dword_offset_imm 2
+	load_val rbx, %2
+	get_val_to_rax %1
+	dq add_rax_rbx
+	dq deref
+	load_val rbx, 0xffffffff
+	dq and_rax_rbx
+%endmacro
+
+%macro take_dword_place 2
+	load_val rax, %2
+	dq mov_r9_rax
+	get_val_to_rax %1
+	dq deref_dword
+	dq mov_r9_mem
+%endmacro
+
+%macro save_dword_offset_imm 2
+	save_rax_to_mem res1
+	load_val rbx, %2
+	get_val_to_rax %1
+	dq add_rax_rbx
+	dq mov_r9_rax
+	get_val_to_rax res1
+	dq mov_r9_mem_dword
+%endmacro
+
+%macro save_byte_offset 2
+	save_rax_to_mem res1
+	place_val_to_reg %2, rbx
+	get_val_to_rax %1
+	dq add_rax_rbx
+	dq mov_r9_rax
+	get_val_to_rax res1
+	dq mov_r9_mem_byte
+%endmacro
+
+%macro place_imm_to_mem 2
+	load_val rax, %2
+	save_rax_to_mem %1
+%endmacro
+
+%macro save_mem_mem 2
+	load_val rdi, %1
+	load_val rsi, %2
+	dq copy_val
+	;get_val_to_rax %2
+	;save_rax_to_mem %1
+%endmacro
+
+%macro fast_add 2
+	load_val rax, %1
+	dq add_mem_imm_%2
+%endmacro
+%endif

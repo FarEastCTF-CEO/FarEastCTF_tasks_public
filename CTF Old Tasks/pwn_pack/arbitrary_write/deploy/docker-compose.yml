@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  arbitrary_write:
+    build: .
+    ports:
+      - "40002:40002"
+    restart: unless-stopped

@@ -1,0 +1,911 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Coinbuzz - Home One</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png"/>
+    
+    <!-- Place favicon.ico in the root directory -->
+    <!-- all css here -->
+    <!-- bootstrap v3.3.7 css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css"/>
+    <!-- animate css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" type="text/css"/>
+    <!-- owl.carousel.2.0.0-beta.2.4 css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" type="text/css"/>
+    <!-- swiper.min.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}" type="text/css"/>
+    <!-- font-awesome v4.6.3 css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" type="text/css"/>
+    <!-- flaticon.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}" type="text/css"/>
+    <!-- magnific-popup.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}" type="text/css"/>
+    <!-- metisMenu.min.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/metisMenu.min.css') }}" type="text/css"/>
+    <!-- style css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css"/>
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" type="text/css"/>
+    <!-- modernizr css -->
+    <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3.min.js') }}" type='text/javascript'></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    
+    <!-- header-area start -->
+    <header class="header-area">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-3 col-sm-4">
+                        <div class="logo">
+                            <a href="/"><img src="{{url_for('static', filename='images/logo.png')}}" /></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-sm-8">
+                        <ul class="contact-info d-flex justify-content-end">
+                            <li>
+                                <span><i class="fa fa-phone"></i> +02 0120 2651 021</span>
+                                <span><i class="fa fa-fax"></i> +00 425 356 4518</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-envelope"></i> info@coinbuzz.com</span>
+                                <span><i class="fa fa-paper-plane-o"></i> www.coinbuzz.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-12 d-none d-lg-block">
+                        <ul class="social-icon d-flex justify-content-end justify-content-sm-center">
+                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-sm-9 d-none d-sm-block">
+                        <ul class="mainmenu d-flex justify-content-end">
+                            <li class="active"><a href="javascript:void(0);">Home <i class="fa fa-angle-down"></i></a>
+                                <ul>
+                                    <li><a href="#">Home Main</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="javascript:void(0);">pages</a>
+                                <ul>
+                                    <li><a href="#">Service Page</a></li>
+                                    <li><a href="#">Service Details</a></li>
+                                    <li><a href="#">Shop page</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">blog</a>
+                            </li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-8">
+                        <div class="geta_quote">
+                            <a href="#">GET A QUOTE?</a>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none col-4 pull-right">
+                        <ul class="menu">
+                            <li class="first"></li>
+                            <li class="second"></li>
+                            <li class="third"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- responsive-menu area start -->
+            <div class="responsive-menu-area d-block d-sm-none">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- responsive-menu area start -->
+        </div>
+        
+    </header>
+    <!-- header-area end -->
+
+    <!-- slider-area start -->
+    <div class="slider-area">
+        <div class="slider-active owl-carousel">
+            <div class="slider-items">
+                <img class="slider" src="{{url_for('static', filename='images/slider/1.jpg')}}" />
+                <div class="slider-content flex-style">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-10 col-12">
+                                <h2>New cryptocurrency <span>CyberpunkCoin</span> Coinbuzz development</h2>
+                                <p>Toss a coin to your Keanu Charles Reeves! O Valley of Plenty! O Valley of Plenty! Toss a coin to your Neo! O Valley of Plenty!.</p>
+                                <ul>
+                                    <li><a href="#">Read more</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-items">
+                <img class="slider" src="{{url_for('static', filename='images/slider/1.jpg')}}" />
+                <div class="slider-content flex-style">
+                    <div class="container">
+                        <div class="row">
+                            <div class="offset-lg-4 col-lg-8 text-right col-12">
+                                <h2>We Are <span>Everyone’s</span> Coinbuzz Agency</h2>
+                                <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form randomised words which don't look even slightly believable.</p>
+                                <ul>
+                                    <li><a href="#">Read more</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider-area end -->
+
+    
+    <!-- featured-area start -->
+    <div class="featured-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="featured-wrap">
+                        <div class="featured-img">
+                            <img src="{{url_for('static', filename='images/featured/1.jpg')}}" />
+                        </div>
+                        <h2><a href="#">Personalized</a></h2>
+                        <p>There are many variations of passages of Lorem the Ipsum available, but the majority have suffered that alteration in some form.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="featured-wrap">
+                        <div class="featured-img">
+                            <img src="{{url_for('static', filename='images/featured/2.jpg')}}" />
+                        </div>
+                        <h2><a href="#">Behind The Screen</a></h2>
+                        <p>There are many variations of passages of Lorem the Ipsum available, but the majority have suffered that alteration in some form.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="featured-wrap">
+                        <div class="featured-img">
+                            <img src="{{url_for('static', filename='images/featured/3.jpg')}}" />
+                        </div>
+                        <h2><a href="#">Time Saver</a></h2>
+                        <p>There are many variations of passages of Lorem the Ipsum available, but the majority have suffered that alteration in some form.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- featured-area end -->
+
+    
+    
+       <!-- contact-area start -->
+    <div class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 offset-lg-5 col-12">
+                    <div class="contact-wrap  flex-style">
+                        <h2>Find out the cryptocurrency rate today</h2>
+                        
+                        
+                        
+                        
+                        
+                        
+<!--==========================================================================================                -->
+                        
+                        
+                        
+                        
+                        
+                        <form id="send_form" action="/check_crypto" method="post">
+                            
+                            <div class="row send_form_row">
+                                <div class="wrapper_radio col-sm-6 col-12">
+				    {%for i in criptoname%}
+				    <p><input id="{{i.crypto_name}}" class="send_form_radio" name="cryptoname" type="radio" value="{{i.crypto_name}}" required>
+                    <label for="{{i.crypto_name}}">{{i.crypto_name}}</label></p>
+                                    
+				    {%endfor%}
+                                </div>
+
+				
+                                <div class="col-sm-6 col-12">
+                                    <button type="submit">Submit Now</button>
+                                </div>
+                            </div>
+
+                            <br><br>
+                            {%if error%}
+                                <h3>{{message}}</h3>
+                            {%endif%}
+                            {%if crypto_price%}
+                            <h3>The cost of the entered cryptocurrency ({{crypto}}):</h3>
+                            <div class="col-12">
+                                {%for x in crypto_price%}
+                                    <h2> {{x.crypto_price}} $ </h2>
+                                {%endfor%}
+                            </div>
+                            {%else%}
+                                {%if crypto%}
+                                    <h2>Information about cryptocurrency {{crypto}} was not found in our database</h2>
+                                {%endif%}
+                            {%endif%}
+
+                        </form>
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+<!--==========================================================================================                -->                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-img d-none d-lg-block">
+            <img src="{{url_for('static', filename='images/bg/2.jpg')}}" />
+        </div>
+    </div>
+    <!-- contact-area end -->
+    
+    
+    <!-- about-area start -->
+    <div class="featured-content-area position-relative bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-6">
+                    <div class="featured-content-wrap">
+                        <h2><span>WHAT IS BITCOIN</span>Buy And Sell Bitcoin</h2>
+                        <p>There are many variations of passages of Lorem an Ipsum available, but the majority have suffered is a alteration in some form, by injected humour or the randomised words which don't look even slightly a believable. by injected humour or the randomised words which slightly a believable.</p>
+                        <a href="#">JOIN US NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-content-img d-none d-lg-block">
+            <img src="{{url_for('static', filename='images/about.png')}}" />
+        </div>
+    </div>
+    <!-- about-area end -->
+
+    <!-- service-area start -->
+    <div class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Why Choose Bitcoin</h2>
+                        <img src="{{url_for('static', filename='images/line.png')}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-wrap">
+                        <h3>What We Offer</h3>
+                        <p>There are many variations of passages of an Lorem Ipsum available but the about majority have suffered alteration in man some form a by injected humour or that randomised the a words which</p>
+                        <p>There are many variations of passages of an Lorem Ipsum available but the about majority have suffered.</p>
+                        <a href="#">Free Consultation</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="service-items">
+                        <span class="flaticon-bitcoin-9"></span>
+                        <h3>Safe And Secure</h3>
+                        <p>There are many variations of Lorem Ipsum available but the about  some majority have form randomised words which believable.</p>
+                    </div>
+                    <div class="service-items">
+                        <span class="flaticon-profits"></span>
+                        <h3>Instant Exchange</h3>
+                        <p>There are many variations of Lorem Ipsum available but the about  some majority have form randomised words which believable.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 col-12">
+                            <div class="service-items">
+                                <span class="flaticon-exchange-1"></span>
+                                <h3>Secure Wallet</h3>
+                                <p>There are many variations of Lorem Ipsum available but the about  some majority have form randomised words which believable.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6 col-12">
+                            <div class="service-items">
+                                <span class="flaticon-bitcoin-7"></span>
+                                <h3>Experts Support</h3>
+                                <p>There are many variations of Lorem Ipsum available but the about  some majority have form randomised words which believable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service-area end -->
+
+
+    <!-- about-area start -->
+    <div class="about-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>About Bitcoin</h2>
+                        <img src="{{url_for('static', filename='images/line.png')}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="about-img">
+                        <img src="{{url_for('static', filename='images/about/1.jpg')}}" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="about-content">
+                        <h3>Minimum purchase is 50 Coins tokens. Get a bonus from 5% to 25% on every token purchase</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 col-6">
+                            <div class="about-items">
+                                <img src="{{url_for('static', filename='images/about/icon/1.png')}}" />
+                                <span class="counter">1454</span>
+                                <p>Support Countrie</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="about-items">
+                                <img src="{{url_for('static', filename='images/about/icon/2.png')}}" />
+                                <span class="counter">759</span>
+                                <p>Bank Support</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="about-items mb-0">
+                                <img src="{{url_for('static', filename='images/about/icon/3.png')}}" />
+                                <span class="counter">1250</span>
+                                <p>BitCoin ATMs</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="about-items mb-0">
+                                <img src="{{url_for('static', filename='images/about/icon/4.png')}}" />
+                                <span class="counter">2391</span>
+                                <p>Producers Ready</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about-area end -->
+
+    <!-- testmonial-area start -->
+    <div class="testmonial-area">
+        <div class="test-active owl-carousel">
+            <div class="test-items">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-4 col-12">
+                            <div class="test-img">
+                                <img src="{{url_for('static', filename='images/test/1.png')}}" />
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-sm-8 col-12">
+                            <div class="test-content">
+                                <h2>Bruce Sparks</h2>
+                                <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star-o"></i></li>
+                                </ul>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                <span class="fa fa-quote-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-items">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-lg-3 col-sm-4 col-12">
+                            <div class="test-img">
+                                <img src="{{url_for('static', filename='images/test/1.png')}}" />
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-sm-8 col-12">
+                            <div class="test-content">
+                                <h2>Bruce Sparks</h2>
+                                <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star-o"></i></li>
+                                </ul>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                <span class="fa fa-quote-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testmonial-area end -->
+    
+    <!-- spacial-area start -->
+    <div class="spacial-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-12">
+                    <h2>The thing that motivates me is a very common form of motivation.with other folk counting on me, it's so easy to be motivated.</h2>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-6 col-12">
+                            <ul class="mb-20">
+                                <li><i class="fa fa-check"></i> There are many variations of passages of Lorem Ipsum available, </li>
+                                <li><i class="fa fa-check"></i> There are many variations of passages of Lorem Ipsum available, </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5 col-sm-6 col-12">
+                            <ul>
+                                <li><i class="fa fa-check"></i> There are many variations of passages of Lorem Ipsum available, </li>
+                                <li><i class="fa fa-check"></i> There are many variations of passages of Lorem Ipsum available, </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- spacial-area end -->
+
+    <!-- resorce-area start -->
+    <div class="resorce-area bg-1 ptb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Our Market Resource</h2>
+                        <img src="{{url_for('static', filename='images/line.png')}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <ul class="resorce-menu row">
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/usd</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/eur</h4>
+                                <p>1745.0008</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/rub</h4>
+                                <p>0014.2156</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/usd</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/eth</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/eur</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/eth</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info">
+                                <h4>btc/usd</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info mb-0">
+                                <h4>btc/eth</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                        <li class="col-6">
+                            <div class="resorce-info mb-0">
+                                <h4>btc/usd</h4>
+                                <p>2415.1426</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <div class="resorce-wrap">
+                        <div id="chartContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- resorce-area end -->
+
+    <!-- expart-area start -->
+    <div class="expart-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 offset-lg-5 col-12">
+                    <div class="expart-wrap">
+                        <h2>We’r a dynamic team of creatives people innovation & Marketing Expert.</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the dummy majority have suffered alteration in some form, by injected humour or dummy to randomised words which don't look even slightly believable. If you are going to a use a passage of Lorem Ipsum, you need to be sure there isn't anything about an embarrassing hidden in the middle of text.</p>
+                        <a href="#">More About <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="expart-img d-none d-lg-block">
+            <img src="{{url_for('static', filename='images/bg/expart.png')}}" />
+            
+        </div>
+    </div>
+    <!-- expart-area end -->
+
+    <!-- team-area start -->
+    <div class="team-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Our Experts Team</h2>
+                        <img src="{{url_for('static', filename='images/line.png')}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="{{url_for('static', filename='images/team/1.jpg')}}" />
+                        </div>
+                        <div class="team-content">
+                            <h4>Conner Wilkinson</h4>
+                            <p>UX / Web Designer</p>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="{{url_for('static', filename='images/team/2.jpg')}}" />
+                        </div>
+                        <div class="team-content">
+                            <h4>Carolina Velez</h4>
+                            <p>Web Developer</p>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="{{url_for('static', filename='images/team/3.jpg')}}" />
+                        </div>
+                        <div class="team-content">
+                            <h4>Michael Arinze</h4>
+                            <p>Marketing Developer</p>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                    <div class="team-wrap">
+                        <div class="team-img">
+                            <img src="{{url_for('static', filename='images/team/4.jpg')}}" />
+                        </div>
+                        <div class="team-content">
+                            <h4>Ashleigh Nelin</h4>
+                            <p>Apps Developer</p>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- team-area end -->
+
+    <!-- nvestments-area start -->
+    <div class="nvestments-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-12">
+                    <div class="nvestments-wrap">
+                        <h2>Need to<span> take care </span> <br> of your Currency Investments</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        <ul>
+                            <li><a href="#">View Services</a></li>
+                            <li><a href="contact.html"> CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="nvestments-img">
+                        <img src="{{url_for('static', filename='images/bg/1.png')}}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nvestments-area end -->
+
+    <!-- blog-area start -->
+    <div class="blog-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Latest Our News</h2>
+                        <img src="{{url_for('static', filename='images/line.png')}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4  col-sm-6 col-12">
+                    <div class="blog-wrap">
+                        <div class="blog-img">
+                            <img src="{{url_for('static', filename='images/blog/1.jpg')}}" />
+                        </div>
+                        <div class="blog-content">
+                            <h3><a href="blog-details.html">Digital Marketo Moved To Their New Office</a></h3>
+                            <ul>
+                                <li><a href="#">Jhon Simith</a></li>
+                                <li><a href="#">2 May, 2017</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                            <p>There are many variations of passages of Lorem is Ipsum available, but the majority have some suffered or alteration in  form, by injected randomised words which.</p>
+                            <a href="blog-details.html" class="readmore">Read More <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="blog-wrap">
+                        <div class="blog-img">
+                            <img src="{{url_for('static', filename='images/blog/2.jpg')}}" />
+                        </div>
+                        <div class="blog-content">
+                            <h3><a href="blog-details.html">Welcome To Our New Head Of Production</a></h3>
+                            <ul>
+                                <li><a href="#">Jhon Simith</a></li>
+                                <li><a href="#">2 May, 2017</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                            <p>There are many variations of passages of Lorem is Ipsum available, but the majority have some suffered or alteration in  form, by injected randomised words which.</p>
+                            <a href="blog-details.html" class="readmore">Read More <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="blog-wrap">
+                        <div class="blog-img">
+                            <img src="{{url_for('static', filename='images/blog/1.jpg')}}" />
+                        </div>
+                        <div class="blog-content">
+                            <h3><a href="blog-details.html">Digital Marketo Launched Their Website</a></h3>
+                            <ul>
+                                <li><a href="#">Jhon Simith</a></li>
+                                <li><a href="#">2 May, 2017</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                            <p>There are many variations of passages of Lorem is Ipsum available, but the majority have some suffered or alteration in  form, by injected randomised words which.</p>
+                            <a href="blog-details.html" class="readmore">Read More <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog-area end -->
+
+    <!-- footer-area start -->
+    <footer class="footer-area">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  col-sm-6 col-12">
+                        <div class="footer-widget footer-logo">
+                            <img src="{{url_for('static', filename='images/logo2.png')}}" />
+                            <p>There are many variations of passages of Lorem Ipsum available, but the dum majority have suffered alteration in the some form by injected.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu">
+                            <h3>Our Services</h3>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Crypto Investments</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Customer Insights</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Bitcoin Analytics</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Bitcoin Exchange</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Bitcoin Exchange</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Business Consulting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="footer-widget footer-twitter">
+                            <h3>Twitter Feeds</h3>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-twitter"></i> https://twitter.com /envatO/ status/944202192013144064 https://twitter.com/envato/status/ 944202192013144064</a> </li>
+                                <li class="mb-0"><a href="#"><i class="fa fa-twitter"></i> https://twitter.com /envatO/ status/944202192013144064 https://twitter.com/envato/status/ 944202192013144064</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="footer-widget footer-contact">
+                            <h3>Contact Information</h3>
+                            <ul class="footer-contact-info">
+                                <li><span>Location: </span> W Jackson Blvd, Chicago United States</li>
+                                <li><span>Email: </span> info@coinbuzz.com</li>
+                                <li><span>Phone: </span> (123) 45678910</li>
+                            </ul>
+                            <h5>We are Social</h5>
+                            <ul class="social-icon d-flex">
+                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 copyright">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://fareastctf.ru" target="_blank" class="text-primary">FarEastCTF</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area end -->
+
+    <!-- jquery latest version -->
+    <script src="{{ url_for('static', filename='js/vendor/jquery-2.2.4.min.js') }}" type='text/javascript'></script>
+    <!-- popper.min.js -->
+    <script src="{{ url_for('static', filename='js/vendor/popper.min.js') }}" type='text/javascript'></script>
+    <!-- bootstrap js -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type='text/javascript'></script>
+    <!-- owl.carousel.2.0.0-beta.2.4 css -->
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}" type='text/javascript'></script>
+    <!-- swiper.min.js -->
+    <script src="{{ url_for('static', filename='js/swiper.min.js') }}" type='text/javascript'></script>
+    <!-- mailchimp.js -->
+    <script src="{{ url_for('static', filename='js/mailchimp.js') }}" type='text/javascript'></script>
+    <!-- plugins js -->
+    <script src="{{ url_for('static', filename='js/jquery.canvasjs.min.js') }}" type='text/javascript'></script>
+    <!-- metisMenu.min.js -->
+    <script src="{{ url_for('static', filename='js/metisMenu.min.js') }}" type='text/javascript'></script>
+    <!-- plugins js -->
+    <script src="{{ url_for('static', filename='js/plugins.js') }}" type='text/javascript'></script>
+        <script>
+            // chart
+    window.onload = function () {
+    var limit = 10000;    //increase number of dataPoints by increasing the limit
+    var y = 100;    
+    var data = [];
+    var dataSeries = { type: "line" };
+    var dataPoints = [];
+    for (var i = 0; i < limit; i += 1) {
+        y += Math.round(Math.random() * 10 - 5);
+        dataPoints.push({
+            x: i,
+            y: y
+        });
+    }
+    dataSeries.dataPoints = dataPoints;
+    data.push(dataSeries);
+
+    //Better to construct options first and then pass it as a parameter
+    var options = {
+        zoomEnabled: true,
+        animationEnabled: true,
+        axisY: {
+            includeZero: false
+        },
+        data: data  // random data
+    };
+
+        $("#chartContainer").CanvasJSChart(options);
+    }
+    </script>
+    <!-- main js -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" type='text/javascript'></script>
+</body>
+
+</html>

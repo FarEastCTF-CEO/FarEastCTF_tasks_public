@@ -1,0 +1,8 @@
+method: GET
+headers:
+  - "User-Agent: SSI-Scanner"
+args:
+  - "--data-urlencode"
+  - "name=<!--#echo var=\"HTTP_USER_AGENT\" -->"
+  - "--max-time"
+  - "5"
