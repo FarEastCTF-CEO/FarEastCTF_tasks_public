@@ -1,0 +1,21 @@
+version: "3"
+services:
+  daemon:
+    container_name: fectf.silent-shell
+    read_only: true
+    restart: always
+    build:
+      context: .
+      args:
+        SSH_USER: $SSH_USER
+        SSH_USER_PASS: $SSH_USER_PASS
+        FLAG: $FLAG
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "10001:22"
+    deploy:
+      resources:
+        limits:
+          memory: "100M"
+          cpus: "0.025"

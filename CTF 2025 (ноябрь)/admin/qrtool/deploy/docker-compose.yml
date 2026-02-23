@@ -1,0 +1,18 @@
+version: "3"
+services:
+  daemon:
+    container_name: fectf.qrtool
+    read_only: true
+    restart: always
+    build:
+      context: .
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "10003:23"
+    env_file: ".env"
+    deploy:
+      resources:
+        limits:
+          memory: "100M"
+          cpus: "0.025"

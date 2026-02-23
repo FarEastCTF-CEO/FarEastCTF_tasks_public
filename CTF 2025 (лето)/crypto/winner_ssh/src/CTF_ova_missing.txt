@@ -1,0 +1,5 @@
+https://drive.google.com/file/d/1Xa3PRN5cZnzCBRRQFV8qB9TeWlB3bFhz/view?usp=sharing
+
+Ожидаемые параметры ВМ (из аннотации):
+- guest IP: 10.0.0.5 (статический)
+- порт: 22/tcp (ssh)

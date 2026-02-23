@@ -1,0 +1,7 @@
+method: GET
+headers:
+  - "User-Agent: scanner"
+  - "Accept: */*"
+args:
+  - "--max-time"
+  - "10"

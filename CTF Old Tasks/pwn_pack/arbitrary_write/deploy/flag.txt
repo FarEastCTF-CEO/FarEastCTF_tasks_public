@@ -1,0 +1,1 @@
+CTF{arbitrary_write_symbol_table}

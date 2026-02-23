@@ -1,0 +1,8 @@
+#!/bin/sh
+
+IFS=
+while echo -n "Text: " && read -r text; do
+    if [ -n "$text" ]; then
+        env - FLAG="$FLAG" qrencode "$text" -o - -8 -t UTF8i </dev/null 2>/dev/null || echo "error: invalid input: $text"
+    fi
+done

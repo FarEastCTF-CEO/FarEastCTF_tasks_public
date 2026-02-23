@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love JS</title>
+</head>
+<body>
+<script>
+  // Simple client-side "password" challenge.
+  var base= new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+  var data=new Array();
+  base.reverse();
+  data[0]=base[44];
+  data[1]=base[11];
+  data[2]=base[50];
+  data[3]=base[29];
+  data[4]=base[61];
+  data[5]=base[41];
+  data[6]=base[49];
+  data[7]=base[12];
+
+  var password=prompt("Please enter the Password!","");
+  if (password==data.join("_")){
+    // IMPORTANT: relative redirect (works on remote platform).
+    window.location.href = "/" + password;
+  }
+</script>
+
+<center>
+  <p style="color:red;">No! Try again!</p>
+  <input type="button" class="button" name="reload" onclick="window.location.reload();" value="Try Again?" />
+</center>
+</body>
+</html>

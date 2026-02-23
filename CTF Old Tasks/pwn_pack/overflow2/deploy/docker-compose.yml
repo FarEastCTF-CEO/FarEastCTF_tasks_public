@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  overflow2:
+    build: .
+    ports:
+      - "16555:16555"
+    restart: unless-stopped

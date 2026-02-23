@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  overflow1:
+    build: .
+    ports:
+      - "31337:31337"
+    restart: unless-stopped

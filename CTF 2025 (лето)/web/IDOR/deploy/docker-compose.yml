@@ -1,0 +1,5 @@
+services:
+  app:
+    build: ./idor
+    ports:
+      - "8080:5000"

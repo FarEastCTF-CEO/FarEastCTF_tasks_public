@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*
+ * File       : font.css
+ * Author     : STUDIO-JT (KMS, NICO)
+ * Guideline  : JTstyle 2.0
+
+ *
+ * SUMMARY:
+ * 01) Pretendard
+ * 02) Outfit
+ */
+
+
+
+/* ************************************** *
+ * Pretendard
+ * ************************************** */  
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    src: url('../../fonts/file/Pretendard-Regular.subset.woff2') format('woff2'), 
+         url('../../fonts/file/Pretendard-Regular.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    src: url('../../fonts/file/Pretendard-Medium.subset.woff2') format('woff2'), 
+         url('../../fonts/file/Pretendard-Medium.subset.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    src: url('../../fonts/file/Pretendard-Bold.subset.woff2') format('woff2'), 
+         url('../../fonts/file/Pretendard-Bold.subset.woff') format('woff');
+}
+
+
+
+/* ************************************** *
+ * Outfit
+ * ************************************** */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../fonts/file/outfit-v6-latin-700.woff2') format('woff2');
+}

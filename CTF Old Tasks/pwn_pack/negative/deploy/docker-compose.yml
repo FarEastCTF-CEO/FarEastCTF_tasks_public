@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  negative:
+    build: .
+    ports:
+      - "40001:40001"
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+services:
+  mongo:
+    image: mongo:6
+    restart: unless-stopped
+
+  web:
+    build: .
+    restart: unless-stopped
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/ctf
+      - PORT=3000
+    depends_on:
+      - mongo
+    ports:
+      - "8080:3000"

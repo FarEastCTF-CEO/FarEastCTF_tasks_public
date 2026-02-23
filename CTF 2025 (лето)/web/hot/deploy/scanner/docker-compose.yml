@@ -1,0 +1,62 @@
+
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - public_net
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      - DATABASE_URL=postgres://su_fareastctf:su_fareastctf123456789@postgres:5432/appdb?sslmode=disable
+      - JWT_SECRET=4953cb29i34hd9wodifhewrf
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - public_net
+      - private_net
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: su_fareastctf
+      POSTGRES_PASSWORD: su_fareastctf123456789
+      POSTGRES_DB: appdb
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - private_net
+
+  gotenberg:
+    image: gotenberg/gotenberg:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - public_net
+      - private_net
+    
+  flagbot:
+    build:
+      context: ./flagbot
+    depends_on:
+      - gotenberg
+    networks:
+      - private_net
+
+volumes:
+  postgres-data:
+
+networks:
+  public_net:
+  private_net:
+    internal: true
